@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="http://localhost/ProyectoSemana1/FormularioRegistro.php" method="post">
+        <fieldset>
+            <legend><strong><h2>Bienvenidx a Preparatorianos</h2></strong></legend>
+            <h3>Regístrate</h3>
+
+            <label for="alumProf">Selecciona: </label>
+            <select name="alumProf">
+                <option>Alumno</option>
+                <option>Profesor</option>
+            </select> <br><br>
+            
+
+            <label for="nombre">Nombre(s):</label>
+            <input type="text" name="nombre" required placeholder="Nombre(s)"> <br><br>
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" name="apellidos" required placeholder="Apellidos"> <br><br>
+
+            <label for="usuario">Nombre de usuario:</label>
+            <input type="text" name="usuario" required placeholder="Nombre de Usuario"> <br><br>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" name="correo" required placeholder="Correo electrónico"> <br><br>
+
+            <label for="contraseña">Contraseña: </label>
+            <input type="text" name="contraseña" required placeholder="Crea una contraseña"> <br><br>
+
+            <label for="noCuenta">Número de Cuenta: </label>
+            <input type="number" name="noCuenta" required placeholder="No. cuenta"> <br><br>
+
+            <label for="fechaNaci">Fecha de Nacimiento: </label>
+            <input type="date" name="fechaNaci" required placeholder="(DDMMAA)"> <br><br>
+
+            <label for="grado">Grado actual: </label>
+            <select name="grado">
+                <option>4°</option>
+                <option>5°</option>
+                <option>6°</option>
+            </select> <br><br>
+
+            <label for="grupo">Grupo actual: </label>
+            <input type="text" name="grupo" required placeholder="Grupo actual"> <br><br>
+
+            <label for="materiasImpartir">Materias a Impartir: </label>
+            <input type="text" name="materiasImpartir" required placeholder="Materias"> <br><br>
+
+            <label for="gruposImpartidos">Grupos a Impartir: </label>
+            <select name="gruposImpartidos">
+                <option>401</option>
+                <option>402</option>
+                <option>403</option>
+            </select> <br><br>
+
+            <label for="noTelef">Número telefónico: </label>
+            <input type="number" name="noTelef" required placeholder="Número telefónico"> <br><br>
+
+            <label for="numTrabajador">Número de Trabajador: </label>
+            <input type="number" name="numTrabajador" required placeholder="Número Trabajador"> <br><br>
+
+            <button type="submit">Continuar</button>
+        </fieldset>
+    </form>
+</body>
+</html>
