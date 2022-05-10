@@ -1,0 +1,19 @@
+.contenido{
+    background-image: url("../../assets/img/biblioteca.jpg");
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 239px;
+    height: 361px;
+    left: 438px;
+    top: 72px;
+    
+    background-color: rgba(252, 183, 118, 0.74);
+    border-radius: 20px;
+}
