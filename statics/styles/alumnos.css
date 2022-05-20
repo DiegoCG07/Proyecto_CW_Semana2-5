@@ -11,7 +11,6 @@
 @font-face {
     font-family: 'LogoG';
     src: url('../fonts/Lobster/Lobster-Regular.ttf');
-    height: 35vw;
     
 }
 
@@ -32,7 +31,6 @@ nav{
     display: flex;
     position: absolute;
     left: 35vw;
-    
     color: aliceblue;
     z-index: 1;
 } 
@@ -47,12 +45,12 @@ nav{
 }
 
 #clases{
-    display: inline-block;
     border-width: 2px;
     border-color: orange;
     border-style: solid;
     border-radius: 10%;
     width: 60vw;
+    height: 80vw;
     padding: 50px;
     margin-top: 20px;
     margin-left: 20px;
@@ -60,13 +58,7 @@ nav{
 
 .card{
     display: inline-block;
-    width: 20vw;
-    
+    justify-items: normal;
     margin: 20px;
-}
-
-.card-body{
-    color: aliceblue;
-    background-color: crimson;
 }
 
