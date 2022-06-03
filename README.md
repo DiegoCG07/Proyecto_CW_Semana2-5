@@ -3,14 +3,15 @@
 ## Descripción del proyecto:
 
 a. Explicación de lo que hace tu proyecto
+
 b. Expresar la importancia de tu proyecto
 
 ### Tecnologías utilizadas:
-1. PHP
+1. Hypertext Preprocessor  "PHP"
 2. JavaScript
-3. Mysql
-4. CSS
-6. HTML
+3. MySQL
+4. Cascading Style Sheets "CSS"
+6. HyperText Markup Language "HTML"
 
 ## Instrucciones de instalación del proyecto:
 
