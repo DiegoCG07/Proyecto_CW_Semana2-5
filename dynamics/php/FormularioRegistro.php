@@ -7,11 +7,8 @@
     $correo = (isset($_POST["correo"]) && $_POST["correo"] != "") ?$_POST["correo"] : "no especificado"; //Correo
     $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "") ?$_POST["contraseña"] : "no especificado"; //Contraseña
     $noCuenta = (isset($_POST["noCuenta"]) && $_POST["noCuenta"] != "") ?$_POST["noCuenta"] : "no especificado"; //Número de Cuenta
-    $fechaNaci = (isset($_POST["fechaNaci"]) && $_POST["fechaNaci"] != "") ?$_POST["fechaNaci"] : "no especificado"; //Fecha de Nacimiento Usuario
     $grado = (isset($_POST["grado"]) && $_POST["grado"] != "") ?$_POST["grado"] : "no especificado"; //Grado
     $grupo = (isset($_POST["grupo"]) && $_POST["grupo"] != "") ?$_POST["grupo"] : "no especificado"; //Grupo
-    $materiasImpartir = (isset($_POST["materiasImpartir"]) && $_POST["materiasImpartir"] != "") ?$_POST["materiasImpartir"] : "no especificado"; //Materias a impartir
-    $gruposImpartidos = (isset($_POST["gruposImpartidos"]) && $_POST["gruposImpartidos"] != "") ?$_POST["gruposImpartidos"] : "no especificado"; //Grupos Impartidos
     $noTelef = (isset($_POST["noTelef"]) && $_POST["noTelef"] != "") ?$_POST["noTelef"] : "no especificado"; //Número de teléfono
     $numTrabajador = (isset($_POST["numTrabajador"]) && $_POST["numTrabajador"] != "") ?$_POST["numTrabajador"] : "no especificado"; //Número de trabajador
 
@@ -50,19 +47,10 @@
                 echo "<td><strong>Número de Cuenta:</strong> $noCuenta</td>";
             echo "</tr>";
             echo "<tr>";
-                echo "<td><strong>Fecha de Nacimiento:</strong> $fechaNaci</td>";
-            echo "</tr>";
-            echo "<tr>";
                 echo "<td><strong>Grado:</strong> $grado</td>";
             echo "</tr>";
             echo "<tr>";
                 echo "<td><strong>Grupo:</strong> $grupo</td>";
-            echo "</tr>";
-            echo "<tr>";
-                echo "<td><strong>Materias a Impartir:</strong> $materiasImpartir</td>";
-            echo "</tr>";
-            echo "<tr>";
-                echo "<td><strong>Grupos a Impartir:</strong> $gruposImpartidos</td>";
             echo "</tr>";
             echo "<tr>";
                 echo "<td><strong>Número Telefonico:</strong> $noTelef</td>";

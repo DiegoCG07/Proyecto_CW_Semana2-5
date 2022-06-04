@@ -1,100 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" href="../assets/img/logo.png" type="image/icon">
         <!--stylesheets-->
-        <link rel="stylesheet" href="./statics/styles/main.css">
-        <link rel="stylesheet" href="../statics/styles/formularioRegistro.css">
+        <!-- <link rel="stylesheet" href="./statics/styles/main.css">
+            <link rel="stylesheet" href="../statics/styles/formularioRegistro.css"> -->
         <title>Formulario</title>
     </head>
-    <body>
-        <header>
 
-        </header>
+    <body>
+        <header></header>
 
         <!-- <div class="col-xl-6" class="col-lg-3" class="col-sm-12"></div> -->
 
-        <div class="contenido">    
+        <div class="contenido">
             <div class="form">
-                <form action="../dynamics/php/FormularioRegistro.php" method="post">
+                <form method="post">
                     <fieldset>
                         <strong><h2>Bienvenidx a Preparatorianos</h2></strong>
                         <h3>Regístrate</h3>
 
                         <label for="nombre">Nombre(s):</label>
-                        <input type="text" name="nombre" required placeholder="Nombre(s)"> 
+                        <input type="text" name="nombre" required placeholder="Nombre(s)">
 
                         <label for="apellidos">Apellidos:</label>
                         <input type="text" name="apellidos" required placeholder="Apellidos"> <br><br>
 
                         <label for="usuario">Nombre de usuario:</label>
-                        <input type="text" name="usuario" required placeholder="Nombre de Usuario"> 
+                        <input type="text" name="usuario" required placeholder="Nombre de Usuario">
 
                         <label for="correo">Correo electrónico:</label>
                         <input type="email" name="correo" required placeholder="Correo electrónico"> <br><br>
-                        
+
                         <label for="noTelef">Número telefónico: </label>
-                        <input type="number" name="noTelef" required placeholder="Número telefónico"> 
-                        
+                        <input type="number" id="noTelef" name="noTelef" required placeholder="Número telefónico">
+
                         <label for="contraseña">Contraseña: </label>
                         <input type="text" name="contraseña" required placeholder="Crea una contraseña"> <br><br>
 
-                        <!-- <label for="fechaNaci">Fecha de Nacimiento: </label>
-                        <input type="date" name="fechaNaci" required placeholder="(DDMMAA)"> <br><br> -->
-                        
                         <label for="alumProf">Selecciona: </label>
-                        <select name="alumProf">
-                            <option>Alumno</option>
-                            <option>Profesor</option>
-                            <option value=""></option>
+                        <select name="alumProf" id="alumProf">
+                            <option value="1">Alumno</option>
+                            <option value="2">Profesor</option>
                         </select> <br><br>
-                        
-                        <div id="alumno">
-                            <!--esto iría en el js-->
+
+                        <div id="alumno" style="display: none;">
                             <label for="noCuenta">Número de Cuenta: </label>
-                            <input type="number" name="noCuenta" required placeholder="No. cuenta"> <br><br>
-                            
+                            <input type="number" name="noCuenta" id="noCuenta" placeholder="No. cuenta"> <br><br>
+
                             <label for="grado">Grado actual: </label>
-                            <select name="grado">
-                                <option>4°</option>
-                                <option>5°</option>
-                                <option>6°</option>
+                            <select name="grado" id="grado">
+                                <option value="1">4°</option>
+                                <option value="2">5°</option>
+                                <option value="3">6°</option>
                             </select> <br><br>
 
                             <label for="grupo">Grupo actual: </label>
-                            <input type="text" name="grupo" required placeholder="Grupo actual"> <br><br>
-
+                            <input type="text" name="grupo" id="grupo" placeholder="Grupo actual"> <br><br>
                         </div>
 
-                        <div id="profesor">
-                            <!--esto iría en el js-->
+                        <div id="profesor" style="display: none;">
                             <label for="numTrabajador">Número de Trabajador: </label>
-                            <input type="number" name="numTrabajador" required placeholder="Número Trabajador"> <br><br>
-                            
-
+                            <input type="text" name="numTrabajador" id="numTrabajador" placeholder="Número Trabajador"><br><br>
                         </div>
 
-                        <!-- <label for="materiasImpartir">Materias a Impartir: </label>
-                        <input type="text" name="materiasImpartir" required placeholder="Materias"> <br><br> -->
+                        <button type="submit" id="continuar">Continuar</button>
+                        <button type="reset">Restablecer</button>
 
-                        <!-- <label for="gruposImpartidos">Grupos a Impartir: </label>
-                        <select name="gruposImpartidos">
-                            <option>401</option>
-                            <option>402</option>
-                            <option>403</option>
-                        </select> <br><br> -->
-
-                        <button type="submit">Continuar</button>
                     </fieldset>
                 </form>
             </div>
         </div>
 
-        <footer>
+        <footer></footer>
 
-        </footer>
+        <script src="../dynamics/JS/FormularioRegistro.js"></script>
     </body>
+
 </html>
