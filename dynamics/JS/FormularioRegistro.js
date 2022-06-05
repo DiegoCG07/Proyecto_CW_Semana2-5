@@ -16,8 +16,8 @@ function verificaTelefono(){
     let todobien = false;
     if(numTelefono.value.length == 10){
         if(regexTelefono.test(numTelefono.value)){
-            console.log("numero telefonico valido");
-            todobien=true;
+            // console.log("numero telefonico valido");
+            todobien = true;
         } else {
             alert("El número telefónico es inválido");
         }
@@ -34,7 +34,7 @@ function verificaDatos(){
         } else {
             if(numCuenta.value.length == 9){
                 if(regexAlumno.test(numCuenta.value)){
-                    console.log("si es un numero de cuenta: "+numCuenta.value);
+                    // console.log("si es un numero de cuenta: "+numCuenta.value);
                     todobien=true;
                 } else {
                     alert("Esto no es un número de cuenta");
@@ -49,7 +49,7 @@ function verificaDatos(){
         } else {
             if(numTrabajador.value.length == 13){
                 if(regexProfesor.test(numTrabajador.value)){
-                    console.log("Si es un numero de trabajador"+numTrabajador.value);
+                    // console.log("Si es un numero de trabajador"+numTrabajador.value);
                     todobien=true;
                 } else {
                     alert("Esto no es un número de trabajador");
@@ -73,12 +73,11 @@ select.addEventListener("click",()=>{
 });
 
 btncontinuar.addEventListener("click",(evento)=>{
-    evento.stopPropagation();
-    evento.preventDefault();
     if(verificaDatos() == true && verificaTelefono() == true){
-        // window.location = "../dynamics/php/FormularioRegistro.php";
-        // console.log("ola");
+        console.log("ola");
     } else {
+        evento.stopPropagation();
+        evento.preventDefault();
         alert("Datos inválidos");
     }
 });
