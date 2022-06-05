@@ -66,17 +66,20 @@ CREATE TABLE `alumno` (
   `ID_Contrasena` int(11) NOT NULL,
   `ID_Grado` int(11) NOT NULL,
   `ID_Grupo` int(11) NOT NULL,
+  `ID_Turno` int(11) NOT NULL,
   PRIMARY KEY (`Num_Cuenta`),
   KEY `ID_Email` (`ID_Email`),
   KEY `ID_TipoUsuario` (`ID_TipoUsuario`),
   KEY `ID_Contrasena` (`ID_Contrasena`),
   KEY `ID_Grado` (`ID_Grado`),
   KEY `ID_Grupo` (`ID_Grupo`),
+  KEY `ID_Turno` (`ID_Turno`),
   CONSTRAINT `alumno_ibfk_1` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`),
   CONSTRAINT `alumno_ibfk_2` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`),
   CONSTRAINT `alumno_ibfk_3` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`),
   CONSTRAINT `alumno_ibfk_4` FOREIGN KEY (`ID_Grado`) REFERENCES `grado` (`ID_Grado`),
-  CONSTRAINT `alumno_ibfk_5` FOREIGN KEY (`ID_Grupo`) REFERENCES `grupo` (`ID_Grupo`)
+  CONSTRAINT `alumno_ibfk_5` FOREIGN KEY (`ID_Grupo`) REFERENCES `grupo` (`ID_Grupo`),
+  CONSTRAINT `alumno_ibfk_6` FOREIGN KEY (`ID_Turno`) REFERENCES `turno` (`ID_Turno`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -370,7 +373,7 @@ CREATE TABLE `grupo` (
   `ID_Grupo` int(11) NOT NULL AUTO_INCREMENT,
   `Grupo` int(11) NOT NULL,
   PRIMARY KEY (`ID_Grupo`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=99 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -379,6 +382,7 @@ CREATE TABLE `grupo` (
 
 LOCK TABLES `grupo` WRITE;
 /*!40000 ALTER TABLE `grupo` DISABLE KEYS */;
+INSERT INTO `grupo` VALUES (1,401),(2,402),(3,403),(4,404),(5,405),(6,406),(7,407),(8,408),(9,409),(10,410),(11,411),(12,412),(13,413),(14,414),(15,415),(16,416),(17,417),(18,451),(19,452),(20,453),(21,454),(22,455),(23,456),(24,457),(25,458),(26,459),(27,460),(28,461),(29,462),(30,463),(31,464),(32,465),(33,466),(34,501),(35,502),(36,503),(37,504),(38,505),(39,506),(40,507),(41,508),(42,509),(43,510),(44,511),(45,512),(46,513),(47,514),(48,515),(49,516),(50,517),(51,518),(52,551),(53,552),(54,553),(55,554),(56,555),(57,556),(58,557),(59,558),(60,559),(61,560),(62,561),(63,562),(64,563),(65,564),(66,601),(67,602),(68,603),(69,604),(70,605),(71,606),(72,607),(73,608),(74,609),(75,610),(76,611),(77,612),(78,613),(79,614),(80,615),(81,616),(82,617),(83,618),(84,619),(85,651),(86,652),(87,653),(88,654),(89,655),(90,656),(91,657),(92,658),(93,659),(94,660),(95,661),(96,662),(97,663),(98,664);
 /*!40000 ALTER TABLE `grupo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -829,6 +833,30 @@ LOCK TABLES `tipousuario_has_permisos` WRITE;
 /*!40000 ALTER TABLE `tipousuario_has_permisos` DISABLE KEYS */;
 /*!40000 ALTER TABLE `tipousuario_has_permisos` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `turno`
+--
+
+DROP TABLE IF EXISTS `turno`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `turno` (
+  `ID_Turno` int(11) NOT NULL AUTO_INCREMENT,
+  `Turno` char(10) NOT NULL,
+  PRIMARY KEY (`ID_Turno`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `turno`
+--
+
+LOCK TABLES `turno` WRITE;
+/*!40000 ALTER TABLE `turno` DISABLE KEYS */;
+INSERT INTO `turno` VALUES (1,'Matutino'),(2,'Vespertino');
+/*!40000 ALTER TABLE `turno` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -839,4 +867,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-05 13:26:40
+-- Dump completed on 2022-06-05 14:01:43
