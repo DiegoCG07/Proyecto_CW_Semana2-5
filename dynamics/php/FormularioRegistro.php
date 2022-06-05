@@ -16,6 +16,7 @@
             $noCuenta = (isset($_POST["noCuenta"]) && $_POST["noCuenta"] != "") ? $_POST["noCuenta"] : false; //Número de Cuenta
             $grado = (isset($_POST["grado"]) && $_POST["grado"] != "") ? $_POST["grado"] : false; //Grado
             $grupo = (isset($_POST["grupo"]) && $_POST["grupo"] != "") ? $_POST["grupo"] : false; //Grupo
+            $turno = (isset($_POST["turno"]) && $_POST["turno"] != "") ? $_POST["turno"] : false;
         } else if($alumProf == 2){
             $numTrabajador = (isset($_POST["numTrabajador"]) && $_POST["numTrabajador"] != "") ? $_POST["numTrabajador"] : false; //Número de trabajador
         }
@@ -61,6 +62,9 @@
                     echo "<tr>";
                         echo "<td><strong>Grupo:</strong> $grupo</td>";
                     echo "</tr>";
+                    echo "<tr>";
+                        echo "<td><strong>Turno:</strong> $turno</td>";
+                    echo "</tr>";
                 } else if($alumProf == 2) {
                     echo "<tr>";
                         echo "<td><strong>Número de Trabajador:</strong> $numTrabajador</td>";
@@ -69,10 +73,39 @@
             echo "</body>";
         echo "</table>";
 
-        //HASHEO
+        // HASHEO
         $sal = uniqid();
         $pimienta = generarPimienta();
         $hasheo = hash("sha256", $contraseña.$pimienta.$sal);
         echo $sal."<br>".$pimienta."<br>".$hasheo;
+
+        // PETICIONES
+        $sql = "INSERT INTO email (Email) VALUES ('$correo')";
+        $res = mysqli_query($conexion, $sql);
+        if($res == true){
+            $ID_Email = mysqli_insert_id($conexion);
+            $sql = "INSERT INTO contrasena (Contrasena_hash,Sal) VALUES ('$hasheo','$sal')";
+            $res = mysqli_query($conexion, $sql);
+            if($res == true){
+                $ID_Contrasena = mysqli_insert_id($conexion);
+                if($alumProf == 1){
+                    // Petición principal alumno
+                    $sql = "INSERT INTO alumno VALUES ($noCuenta,'$nombre','$apellidos',$ID_Email,$noTelef,'$usuario',$alumProf,$ID_Contrasena,$grado,$grupo,$turno)";
+                } else if($alumProf == 2) {
+                    // Petición principal maestro
+                    $sql = "INSERT INTO profesor VALUES ('$numTrabajador','$nombre','$apellidos',$ID_Email,$noTelef,'$usuario',$alumProf,$ID_Contrasena)";
+                }
+                $res = mysqli_query($conexion, $sql);
+                if($res == true){
+                    echo "<h1>Se registro correctamente al usuario</h1>";
+                } else {
+                    echo "<h1>Fallo al subir los datos</h1>";
+                }
+            } else {
+                echo "<h1>Fallo al subir los datos</h1>";
+            }
+        } else {
+            echo "<h1>Fallo al subir los datos</h1>";
+        }
     }
 ?>
