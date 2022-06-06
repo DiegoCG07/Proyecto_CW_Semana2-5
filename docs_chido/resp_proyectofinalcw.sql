@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: proyectofinal
+-- Host: localhost    Database: proyectofinalcw
 -- ------------------------------------------------------
 -- Server version	10.4.24-MariaDB
 
@@ -49,7 +49,7 @@ DROP TABLE IF EXISTS `alumno`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `alumno` (
   `Num_Cuenta` int(11) NOT NULL,
-  `Telefono` int(11) NOT NULL,
+  `Telefono` bigint(20) NOT NULL,
   `Usuario` char(50) NOT NULL,
   `ID_Grado` int(11) NOT NULL,
   `ID_Grupo` int(11) NOT NULL,
@@ -576,7 +576,7 @@ DROP TABLE IF EXISTS `profesor`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `profesor` (
   `Num_Trabajador` varchar(13) NOT NULL,
-  `Telefono` int(11) NOT NULL,
+  `Telefono` bigint(20) NOT NULL,
   `Usuario` char(50) NOT NULL,
   `ID_Usuario` int(11) NOT NULL,
   PRIMARY KEY (`Num_Trabajador`),
@@ -868,4 +868,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-06 11:19:39
+-- Dump completed on 2022-06-06 11:55:43
