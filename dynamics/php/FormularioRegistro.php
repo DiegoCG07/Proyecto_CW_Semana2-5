@@ -4,7 +4,7 @@
     if(!$conexion){
         echo "No se pudo conectar con la base de datos";
     } else {
-        require_once "seguridad.php";
+        require_once "Seguridad.php";
         $alumProf = (isset($_POST["alumProf"]) && $_POST["alumProf"] != "") ? $_POST["alumProf"] : false; //Alumno-Profe
         $nombre = (isset($_POST["nombre"]) && $_POST["nombre"] != "") ? $_POST["nombre"] : false; //Nombre
         $apellidos = (isset($_POST["apellidos"]) && $_POST["apellidos"] != "") ? $_POST["apellidos"] : false; //Apellidos

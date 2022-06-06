@@ -32,19 +32,27 @@
             // echo "<br>";
 
             $existeEmail = false;
-            $sql = "SELECT * FROM email";
+            $sql = "SELECT * FROM usuario NATURAL JOIN email NATURAL JOIN contrasena;";
             $res = mysqli_query($conexion, $sql);
             while($row = mysqli_fetch_assoc($res)){
                 if($row['Email'] == $correo){
                     $existeEmail = true;
+                    $contrasena_hash_base = $row["Contrasena_hash"];
+                    $sal_base = $row["Sal"];
                 }
             }
             if($existeEmail == false){
                 $respuesta = array("ok" => true, "texto" => "Usuario no registrado");
                 echo json_encode($respuesta);
             } else if($existeEmail == true){
-                $respuesta = array("ok" => true, "texto" => "El usuario si existe");
-                echo json_encode($respuesta);
+                require_once "Seguridad.php";
+                if(verificar_contra_pimienta($contrasena,$sal_base,$contrasena_hash_base) == true){
+                    $respuesta = array("ok" => true, "texto" => "Datos válidos");
+                    echo json_encode($respuesta);
+                } else {
+                    $respuesta = array("ok" => true, "texto" => "Contraseña incorrecta");
+                    echo json_encode($respuesta);
+                }
             }
         }
     }

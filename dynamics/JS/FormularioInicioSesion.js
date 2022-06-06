@@ -27,8 +27,11 @@ window.addEventListener("load", ()=>{
                     if(datosJSON.texto == "Usuario no registrado"){
                         alert(datosJSON.texto);
                         btnRegistro.style.display = "block";
+                    } else if(datosJSON.texto == "Contraseña incorrecta"){
+                        alert(datosJSON.texto);
+                    } else {
+                        alert(datosJSON.texto);
                     }
-                    console.log("true");
                 } else if(datosJSON.ok == false){
                     alert(datosJSON.texto);
                 }
@@ -38,10 +41,10 @@ window.addEventListener("load", ()=>{
     btnInicio.addEventListener("click",(evento)=>{
         evento.stopPropagation();
         evento.preventDefault();
+        btnRegistro.style.display = "none";
         if(verificaDatos() == true){
             // alert("Puede continuar");
             verifInicioSesion();
-            evento.preventDefault();
         } else {
             // alert("Datos inválidos");
         }
