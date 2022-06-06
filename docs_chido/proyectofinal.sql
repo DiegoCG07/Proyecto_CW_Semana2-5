@@ -1,6 +1,6 @@
 -- MariaDB dump 10.19  Distrib 10.4.24-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: proyectofinalcw
+-- Host: localhost    Database: proyectofinal
 -- ------------------------------------------------------
 -- Server version	10.4.24-MariaDB
 
@@ -24,18 +24,10 @@ DROP TABLE IF EXISTS `administrador`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `administrador` (
   `Usuario` char(50) NOT NULL,
-  `Nombre` char(50) NOT NULL,
-  `Apellidos` char(50) NOT NULL,
-  `ID_TipoUsuario` int(11) NOT NULL,
-  `ID_Contrasena` int(11) NOT NULL,
-  `ID_Email` int(11) NOT NULL,
+  `ID_Usuario` int(11) NOT NULL,
   PRIMARY KEY (`Usuario`),
-  KEY `ID_TipoUsuario` (`ID_TipoUsuario`),
-  KEY `ID_Contrasena` (`ID_Contrasena`),
-  KEY `ID_Email` (`ID_Email`),
-  CONSTRAINT `administrador_ibfk_1` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`),
-  CONSTRAINT `administrador_ibfk_2` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`),
-  CONSTRAINT `administrador_ibfk_3` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`)
+  KEY `ID_Usuario` (`ID_Usuario`),
+  CONSTRAINT `administrador_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -57,29 +49,21 @@ DROP TABLE IF EXISTS `alumno`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `alumno` (
   `Num_Cuenta` int(11) NOT NULL,
-  `Nombre` char(50) NOT NULL,
-  `Apellidos` char(50) NOT NULL,
-  `ID_Email` int(11) NOT NULL,
   `Telefono` int(11) NOT NULL,
   `Usuario` char(50) NOT NULL,
-  `ID_TipoUsuario` int(11) NOT NULL,
-  `ID_Contrasena` int(11) NOT NULL,
   `ID_Grado` int(11) NOT NULL,
   `ID_Grupo` int(11) NOT NULL,
   `ID_Turno` int(11) NOT NULL,
+  `ID_Usuario` int(11) NOT NULL,
   PRIMARY KEY (`Num_Cuenta`),
-  KEY `ID_Email` (`ID_Email`),
-  KEY `ID_TipoUsuario` (`ID_TipoUsuario`),
-  KEY `ID_Contrasena` (`ID_Contrasena`),
   KEY `ID_Grado` (`ID_Grado`),
   KEY `ID_Grupo` (`ID_Grupo`),
   KEY `ID_Turno` (`ID_Turno`),
-  CONSTRAINT `alumno_ibfk_1` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`),
-  CONSTRAINT `alumno_ibfk_2` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`),
-  CONSTRAINT `alumno_ibfk_3` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`),
+  KEY `ID_Usuario` (`ID_Usuario`),
   CONSTRAINT `alumno_ibfk_4` FOREIGN KEY (`ID_Grado`) REFERENCES `grado` (`ID_Grado`),
   CONSTRAINT `alumno_ibfk_5` FOREIGN KEY (`ID_Grupo`) REFERENCES `grupo` (`ID_Grupo`),
-  CONSTRAINT `alumno_ibfk_6` FOREIGN KEY (`ID_Turno`) REFERENCES `turno` (`ID_Turno`)
+  CONSTRAINT `alumno_ibfk_6` FOREIGN KEY (`ID_Turno`) REFERENCES `turno` (`ID_Turno`),
+  CONSTRAINT `alumno_ibfk_7` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -492,18 +476,10 @@ DROP TABLE IF EXISTS `moderador`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `moderador` (
   `Usuario` char(50) NOT NULL,
-  `Nombre` char(50) NOT NULL,
-  `Apellidos` char(50) NOT NULL,
-  `ID_TipoUsuario` int(11) NOT NULL,
-  `ID_Contrasena` int(11) NOT NULL,
-  `ID_Email` int(11) NOT NULL,
+  `ID_Usuario` int(11) NOT NULL,
   PRIMARY KEY (`Usuario`),
-  KEY `ID_TipoUsuario` (`ID_TipoUsuario`),
-  KEY `ID_Contrasena` (`ID_Contrasena`),
-  KEY `ID_Email` (`ID_Email`),
-  CONSTRAINT `moderador_ibfk_1` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`),
-  CONSTRAINT `moderador_ibfk_2` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`),
-  CONSTRAINT `moderador_ibfk_3` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`)
+  KEY `ID_Usuario` (`ID_Usuario`),
+  CONSTRAINT `moderador_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -600,20 +576,12 @@ DROP TABLE IF EXISTS `profesor`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `profesor` (
   `Num_Trabajador` varchar(13) NOT NULL,
-  `Nombre` char(50) NOT NULL,
-  `Apellidos` char(50) NOT NULL,
-  `ID_Email` int(11) NOT NULL,
   `Telefono` int(11) NOT NULL,
   `Usuario` char(50) NOT NULL,
-  `ID_TipoUsuario` int(11) NOT NULL,
-  `ID_Contrasena` int(11) NOT NULL,
+  `ID_Usuario` int(11) NOT NULL,
   PRIMARY KEY (`Num_Trabajador`),
-  KEY `ID_Email` (`ID_Email`),
-  KEY `ID_TipoUsuario` (`ID_TipoUsuario`),
-  KEY `ID_Contrasena` (`ID_Contrasena`),
-  CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`),
-  CONSTRAINT `profesor_ibfk_2` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`),
-  CONSTRAINT `profesor_ibfk_3` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`)
+  KEY `ID_Usuario` (`ID_Usuario`),
+  CONSTRAINT `profesor_ibfk_1` FOREIGN KEY (`ID_Usuario`) REFERENCES `usuario` (`ID_Usuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -857,6 +825,39 @@ LOCK TABLES `turno` WRITE;
 INSERT INTO `turno` VALUES (1,'Matutino'),(2,'Vespertino');
 /*!40000 ALTER TABLE `turno` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `usuario` (
+  `ID_Usuario` int(11) NOT NULL AUTO_INCREMENT,
+  `ID_Email` int(11) NOT NULL,
+  `ID_Contrasena` int(11) NOT NULL,
+  `ID_TipoUsuario` int(11) NOT NULL,
+  `Nombre` char(50) NOT NULL,
+  `Apellidos` char(50) NOT NULL,
+  PRIMARY KEY (`ID_Usuario`),
+  KEY `ID_Email` (`ID_Email`),
+  KEY `ID_Contrasena` (`ID_Contrasena`),
+  KEY `ID_TipoUsuario` (`ID_TipoUsuario`),
+  CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`),
+  CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`),
+  CONSTRAINT `usuario_ibfk_3` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `usuario`
+--
+
+LOCK TABLES `usuario` WRITE;
+/*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+/*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -867,4 +868,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-05 14:01:43
+-- Dump completed on 2022-06-06 11:19:39

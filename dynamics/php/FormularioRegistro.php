@@ -88,16 +88,24 @@
             $res = mysqli_query($conexion, $sql);
             if($res == true){
                 $ID_Contrasena = mysqli_insert_id($conexion);
-                if($alumProf == 1){
-                    // Petición principal alumno
-                    $sql = "INSERT INTO alumno VALUES ($noCuenta,'$nombre','$apellidos',$ID_Email,$noTelef,'$usuario',$alumProf,$ID_Contrasena,$grado,$grupo,$turno)";
-                } else if($alumProf == 2) {
-                    // Petición principal maestro
-                    $sql = "INSERT INTO profesor VALUES ('$numTrabajador','$nombre','$apellidos',$ID_Email,$noTelef,'$usuario',$alumProf,$ID_Contrasena)";
-                }
+                $sql = "INSERT INTO usuario (ID_Email,ID_Contrasena,ID_TipoUsuario,Nombre,Apellidos) VALUES ($ID_Email,$ID_Contrasena,$alumProf,'$nombre','$apellidos')";
                 $res = mysqli_query($conexion, $sql);
                 if($res == true){
-                    echo "<h1>Se registro correctamente al usuario</h1>";
+                    $ID_Usuario = mysqli_insert_id($conexion);
+                    if($alumProf == 1){
+                        // Petición principal alumno
+                        $sql = "INSERT INTO alumno VALUES ($noCuenta,$noTelef,'$usuario',$grado,$grupo,$turno,$ID_Usuario)";
+                    } else if($alumProf == 2) {
+                        // Petición principal maestro
+                        $sql = "INSERT INTO profesor VALUES ('$numTrabajador',$noTelef,'$usuario',$ID_Usuario)";
+                    }
+                    $res = mysqli_query($conexion, $sql);
+                    if($res == true){
+                        echo "<h1>Se registro correctamente al usuario</h1>";
+                        header("location: ../../FormularioInicioSesion.html");
+                    } else {
+                        echo "<h1>Fallo al subir los datos</h1>";
+                    }
                 } else {
                     echo "<h1>Fallo al subir los datos</h1>";
                 }
