@@ -1,3 +1,15 @@
+<?php
+    session_name("Sesion");
+    session_id("021e31y8d4655");
+    session_start();
+    if(isset($_SESSION["ID_TipoUsuario"])){
+        if($_SESSION["ID_TipoUsuario"] == 1){
+            header("location: ./templates/alumnos.php");
+        } else if($_SESSION["ID_TipoUsuario"] == 2){
+            header("location: ./templates/maestros.php");
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,6 +50,7 @@
         </div>
 
         <footer></footer>
+
         <script src="./dynamics/JS/FormularioInicioSesion.js"></script>
     </body>
 

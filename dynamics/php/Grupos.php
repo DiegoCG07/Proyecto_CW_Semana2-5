@@ -2,11 +2,10 @@
     include("./config.php");
     $conexion = connect();
     if(!$conexion){
-        echo "No se pudo conectar con la base de datos";
+        $respuesta = array("ok" => false, "texto" => "No se pudo ingresar");
     } else {
         $grado = (isset($_POST["grado"]) && $_POST["grado"] != "") ? $_POST["grado"] : false;
         $turno = (isset($_POST["turno"]) && $_POST["turno"] != "") ? $_POST["turno"] : false;
-
         if($grado == 1){
             $sql = ($turno == 1) ? "SELECT * FROM grupo WHERE Grupo<450" : "SELECT * FROM grupo WHERE Grupo>450 && Grupo<500";
         }else if($grado == 2){
@@ -16,7 +15,6 @@
         } else {
             $sql = "SELECT * FROM grupo";
         }
-
         $res = mysqli_query($conexion, $sql);
         if($res == true){
             $resultados = [];
@@ -24,10 +22,9 @@
                 $resultados[] = array("id" => $row["ID_Grupo"], "numero" => $row["Grupo"]);
             }
             $respuesta = array("ok" => true,"resultados"=>$resultados);
-            echo json_encode($respuesta);
         } else {
             $respuesta = array("ok" => false, "texto" => "No se pudo ingresar");
-            echo json_encode($respuesta);
         }
     }
+    echo json_encode($respuesta);
 ?>

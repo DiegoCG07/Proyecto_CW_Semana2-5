@@ -1,3 +1,8 @@
+<?php
+    session_name("Sesion");
+    session_id("021e31y8d4655");
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,11 +52,14 @@
             <img src="../statics/img/coyoseis.png" alt="Collage" class="coyoseis">
         </div>
         <div id="clases">
-            <h1>¡Bienvenidx, alumno!</h1><br>
+            <?php
+                echo "<h1>¡Bienvenidx, ".$_SESSION["Usuario"]."!</h1>";
+            ?>
+            <br>
 
             <!-- clases -->
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+            <div class="card">
+                <!-- <img src="..." class="card-img-top" alt="..."> -->
                 <div class="card-body">
                     <h5 class="card-title">Materia 1</h5>
                     <p class="card-text">Profesor: </p>
@@ -59,7 +67,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <!-- <div class="card">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Materia 2</h5>
@@ -68,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="card" style="width: 18rem;">
+            <div class="card">
                 <img src="..." class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">Materia 3</h5>
@@ -77,7 +85,49 @@
                 </div>
             </div>
 
-            <script src="../libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Materia 4</h5>
+                    <p class="card-text">Profesor: </p>
+                    <a href="#" class="btn btn-primary">Ir a Tablon</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Materia 5</h5>
+                    <p class="card-text">Profesor: </p>
+                    <a href="#" class="btn btn-primary">Ir a Tablon</a>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Materia 6</h5>
+                    <p class="card-text">Profesor: </p>
+                    <a href="#" class="btn btn-primary">Ir a Tablon</a>
+                </div>
+            </div>
+        </div> -->
+
+        <div class="card" style="display: flex;">
+            <div class="card-body">
+                <h5 class="card-title">Calendario</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Aqui se muestran las fechas importantes de la prepa</h6>
+                <p class="card-text"></p>
+                <a href="#" class="card-link">Ir</a>
+                <a href="#" class="card-link">Calendario de la prepa</a>
+            </div>
+        </div>
+
+        <form action='../dynamics/php/cerrarSesion.php' method='post' target='_self'>
+            <button>Cerrar sesion</button>
+        </form>
+
+        <script src="../libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
     </body>
 
 </html>

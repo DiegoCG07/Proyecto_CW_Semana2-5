@@ -6,7 +6,7 @@
     define("DB","");
  
     function connect(){
-        $con=mysqli_connect(DBHOST,DBUSER, PASSWORD, DB);
+        $con = mysqli_connect(DBHOST,DBUSER, PASSWORD, DB);
        
         if(!$con){
             mysqli_connect_error();
