@@ -1,9 +1,10 @@
 body{
-    background-image: url("../../statics/img/p6.jpg");
+    background-image: url("../media/img/p6.jpg");
     background-size: cover;
 }
 
 .contenido{
+    height: 100vh;
     background-position: center;
     background-size: cover;
     display: flex;
@@ -13,10 +14,10 @@ body{
 
 .form{
     width: 239px;
-    height: 361px;
     left: 438px;
     top: 72px;
     
     background-color: rgba(252, 183, 118, 0.74);
     border-radius: 20px;
+    padding: 2em;
 }

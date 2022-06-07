@@ -55,3 +55,14 @@ body{
     cursor: pointer;
     font-weight: bolder;
 }
+#btn-Regresar{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0;
+    margin: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
+}

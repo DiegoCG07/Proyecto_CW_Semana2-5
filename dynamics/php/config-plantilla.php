@@ -1,5 +1,4 @@
 <?php
- 
     define("DBUSER","");
     define("DBHOST","");
     define("PASSWORD","");
@@ -15,5 +14,4 @@
         }
         return $con;
     }
- 
 ?>

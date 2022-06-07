@@ -1,5 +1,3 @@
-var misCookies = document.cookie
-
 function readCookie(name){
     let contenidoCookie = "";
     let listaCookies = misCookies.split(";");
@@ -10,7 +8,5 @@ function readCookie(name){
     }
     return contenidoCookie;
 }
-
-var cookieIDClase = readCookie("ID_Clase=")
-console.log(cookieIDClase);
-
+var misCookies = document.cookie;
+var cookieIDClase = readCookie("ID_Clase=");

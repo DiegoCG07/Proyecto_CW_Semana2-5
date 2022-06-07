@@ -1,6 +1,6 @@
 body{
     background-color: #f1effe;
-    background-image: url(../img/FondoPagProf.jpg);
+    background-image: url(../media/img/FondoPagProf.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -23,12 +23,25 @@ body{
     left: 20px;
     border: 3px solid;
     border-radius: 20px;
-    margin: 15px;
+    padding: 3em;
     text-align: center;
+    border-color: orange;
+    margin-bottom: 3em;
 }
 #crea{
     margin: 15px;
     font-size: 25px;
 }
 
+#btn-Regresar{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0;
+    margin: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
+}
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
         <!-- <link rel="stylesheet" href="../statics/styles/VistaPrinProf.css"> -->
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
+    
     <body>
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
@@ -42,8 +44,7 @@
                 </div>
             </div>
         </nav>
-        <br><br><br><br><br><br><br>
-        
+        <br><br><br><br><br><br><br><br><br>
         <button id="btn-editar">Editar ahorcado</button>
         <button id="btn-vista">Vista Previa</button>
         <form id="formEditar" style="display: none;">
@@ -62,8 +63,13 @@
                 <button id="enviar">Enviar</button>
             </fieldset>
         </form>
+        <br><br>
+        <form action="./VistaClaseProf.php" method="post">
+            <button id="btn-Regresar">Regresar</button>
+        </form>
 
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
         <script src="../dynamics/JS/juegosProf.js"></script>
     </body>
+
 </html>

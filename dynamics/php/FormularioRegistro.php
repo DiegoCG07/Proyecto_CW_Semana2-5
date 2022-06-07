@@ -21,58 +21,6 @@
             $numTrabajador = (isset($_POST["numTrabajador"]) && $_POST["numTrabajador"] != "") ? $_POST["numTrabajador"] : false; //Número de trabajador
         }
 
-        // echo "<table border=\"2\>";
-        //     echo "<thead>";
-        //         echo "<tr>";
-        //             echo "<th colspan=\"4\"><b></b></th>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td colspan=\"4\"><b><center>Tu cuenta:</center></b></td>";
-        //         echo "</tr>";
-        //     echo "</thead>";
-        //     echo "<body>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Tipo de Usuario:</strong> $alumProf</td>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Nombre:</strong> $nombre</td>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Apellidos:</strong> $apellidos</td>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Usuario:</strong> $usuario</td>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Correo electrónico:</strong> $correo</td>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Contraseña:</strong> $contraseña</td>";
-        //         echo "</tr>";
-        //         echo "<tr>";
-        //             echo "<td><strong>Número Telefonico:</strong> $noTelef</td>";
-        //         echo "</tr>";
-        //         if($alumProf == 1){
-        //             echo "<tr>";
-        //                 echo "<td><strong>Número de Cuenta:</strong> $noCuenta</td>";
-        //             echo "</tr>";
-        //             echo "<tr>";
-        //                 echo "<td><strong>Grado:</strong> $grado</td>";
-        //             echo "</tr>";
-        //             echo "<tr>";
-        //                 echo "<td><strong>Grupo:</strong> $grupo</td>";
-        //             echo "</tr>";
-        //             echo "<tr>";
-        //                 echo "<td><strong>Turno:</strong> $turno</td>";
-        //             echo "</tr>";
-        //         } else if($alumProf == 2) {
-        //             echo "<tr>";
-        //                 echo "<td><strong>Número de Trabajador:</strong> $numTrabajador</td>";
-        //             echo "</tr>";
-        //         }
-        //     echo "</body>";
-        // echo "</table>";
-
         // HASHEO
         $sal = uniqid();
         $pimienta = generarPimienta();

@@ -18,7 +18,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio de Sesión</title>
-        <!--stylesheets-->
         <link rel="stylesheet" href="./statics/styles/main.css">
         <link rel="stylesheet" href="./statics/styles/formularioInicio.css">
     </head>
@@ -29,7 +28,6 @@
         <div class="contenido">
             <div class="form">
                 <form id="formInicio" method="post">
-                    <fieldset>
                         <strong><h2>¿Qué tal Coyo-amigo?</h2></strong>
                         <h3>Iniciar sesión</h3>
 
@@ -44,7 +42,6 @@
                         <button type="submit" id="btn-inicio">Iniciar sesión</button><br><br>
 
                         <a href="./templates/FormularioRegistro.html" target="_self" style="display: none;" id="btn-registro">Registrate</a>
-                    </fieldset>
                 </form>
             </div>
         </div>

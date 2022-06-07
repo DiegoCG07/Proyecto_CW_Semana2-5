@@ -45,10 +45,7 @@ window.addEventListener("load", ()=>{
         evento.preventDefault();
         btnRegistro.style.display = "none";
         if(verificaDatos() == true){
-            // alert("Puede continuar");
             verifInicioSesion();
-        } else {
-            // alert("Datos inválidos");
         }
     });
 });

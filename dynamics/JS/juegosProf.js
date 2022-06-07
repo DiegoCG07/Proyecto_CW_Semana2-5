@@ -120,7 +120,7 @@ window.addEventListener("load",()=>{
     enviar.addEventListener("click", (evento) => {
         evento.stopPropagation();
         evento.preventDefault();
-        console.log(palabras);
+        // console.log(palabras);
         subePalabras();
     });
 });

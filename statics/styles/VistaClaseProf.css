@@ -1,6 +1,6 @@
 body{
     background-color: #f1effe;
-    background-image: url(../img/fondoP6.jpg);
+    background-image: url(../media/img/fondoP6.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
 }
@@ -113,4 +113,15 @@ body{
     display: inline-block;
     font-size: 20px;
     margin: 15px;
+}
+#btn-Regresar{
+    background-color: orange;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0;
+    margin: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1em;
 }

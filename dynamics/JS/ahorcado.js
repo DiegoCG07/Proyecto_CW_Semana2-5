@@ -62,9 +62,11 @@ window.addEventListener("load",()=>{
     const letraIntroducida = document.getElementById("letra");
     const botones = document.getElementById("botones");
     const total = document.getElementById("total");
+    const btnRegresar = document.getElementById("btn-Regresar");
 
     ahorcado.addEventListener("click",()=>{
         carousel.style.display = "none";
+        btnRegresar.style.display = "none";
         title.innerHTML = "Ahorcado";
         title.style.marginTop = "20vw";
         juego.style.display = "flex";
@@ -143,6 +145,7 @@ window.addEventListener("load",()=>{
         } else if(evento.target.id == "btnRegresar"){
             inicializarV();
             carousel.style.display = "flex";
+            btnRegresar.style.display = "flex";
             title.innerHTML = "Juegos";
             title.style.marginTop = "0";
             juego.style.display = "none";

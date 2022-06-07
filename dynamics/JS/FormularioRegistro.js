@@ -19,7 +19,6 @@ window.addEventListener("load", ()=>{
         let todobien = false;
         if(numTelefono.value.length == 10){
             if(regexTelefono.test(numTelefono.value)){
-                // console.log("numero telefonico valido");
                 todobien = true;
             } else {
                 alert("El número telefónico es inválido");
@@ -37,7 +36,6 @@ window.addEventListener("load", ()=>{
             } else {
                 if(numCuenta.value.length == 9){
                     if(regexAlumno.test(numCuenta.value)){
-                        // console.log("si es un numero de cuenta: "+numCuenta.value);
                         todobien=true;
                     } else {
                         alert("Esto no es un número de cuenta");
@@ -52,7 +50,6 @@ window.addEventListener("load", ()=>{
             } else {
                 if(numTrabajador.value.length == 13){
                     if(regexProfesor.test(numTrabajador.value)){
-                        // console.log("Si es un numero de trabajador"+numTrabajador.value);
                         todobien=true;
                     } else {
                         alert("Esto no es un número de trabajador");
@@ -78,7 +75,6 @@ window.addEventListener("load", ()=>{
                 if(datosJSON.ok == true){
                     let selectgrupo = document.getElementById("grupo");
                     selectgrupo.innerHTML = "";
-                    // console.log(datosJSON);
                     for(resultado of datosJSON.resultados){
                         selectgrupo.innerHTML+="<option value='"+resultado.id+"'>"+resultado.numero+"</option>";
                     }
