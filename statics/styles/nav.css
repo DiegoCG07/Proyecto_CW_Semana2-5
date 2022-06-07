@@ -1,0 +1,61 @@
+.icono{
+    height: 45px;
+    margin-left: 20px;
+    margin-right: 25px;
+    padding: 4px;
+
+    border-style: solid;
+    border-radius: 50%;
+    border-width: thin;
+}
+
+#iconosNav{
+    display: flex;
+    justify-content: end;
+}
+.container-fluid>*{
+    width: 33.3%;
+    display: flex;
+    align-items: center
+}
+
+#div1{
+    display: flex;
+    justify-content: start;
+    align-items: center
+}
+.titulo{
+    font-family: 'LogoG';
+    margin-left: 20px;
+    font-size: x-large;
+    color:#22566B;
+    text-decoration: none;
+}
+.offcanvas{
+    transition: transform 0.1s cubic-bezier(0.4, 0, 1, 1) !important;
+}
+.offcanvas-start{
+    background-color: #f5ba4c98 !important;
+    width:20% !important;
+    /* position: static !important; */
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.dropdown-menu[data-bs-popper]{
+    left: auto !important; 
+    top: 60px !important; 
+}
+nav{
+    position: static !important;
+}
+.offcanvas-backdrop.show{
+    opacity: 0 !important;
+}
+
+nav.bg-light{
+    background-color: #f5ba4c98 !important;  
+}
+.dropdown-toggle::after{
+    content: none !important;
+}

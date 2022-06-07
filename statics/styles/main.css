@@ -1,21 +1,68 @@
+@font-face {
+    font-family: 'Títulos';
+    src: url('../fonts/Amiko/Amiko-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'Logo';
+    src: url('../fonts/Lobster/Lobster-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'LogoG';
+    src: url('../fonts/Lobster/Lobster-Regular.ttf');
+    height: 35vw;
+    
+}
+@font-face {
+    font-family: 'Fira_Sans';
+    src: url('../fonts/Fira_Sans/FiraSans-ExtraLight.ttf');
+}
+
+@font-face {
+    font-family: 'Mukta';
+    src: url('../fonts/Mukta_Vaani/MuktaVaani-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Mukta';
+    src: url('../fonts/Mukta_Vaani/MuktaVaani-Light.ttf');
+}
+
 /*Estilos Generales*/
 
 body{
     height: 100%;
+    /* background-color: #F1EFFE; */
+    /* background-color: #f5ee9e8a !important; */
     background-color: #F1EFFE;
-        margin: 0;
-        display: flex;
-        flex-direction: column;
-        
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    
 }
 
-header{
-    
-    background-color: #f5ba4c98;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
-    position: fixed;
-    width: 100%;
-    
+#contenedor{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+#contenido{
+    grid-column-start: 2;
+    grid-column-end: 3;
+   
+}
+.secciones{
+     border-radius: 10px;
+    border-color: rgb(216, 216, 216);
+    border-style: solid;
+    border-width: thin;
+}
+aside{
+    grid-column-start: 3;
+    grid-column-end: 4;
 }
 
 footer{
@@ -24,4 +71,17 @@ footer{
     box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     position: fixed;
     width: 100%;
+    bottom: 0%;
+    padding: 15px;
+    font-size: small;
+}
+.footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 5%;
+}
+
+h5{
+    font-family: 'Mukta';
+    font-size: xx-small;
 }

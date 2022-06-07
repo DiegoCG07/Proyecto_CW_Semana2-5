@@ -15,16 +15,16 @@
     
 }
 
-body{
+/* body{
     background-color: #f5ee9e8a;
-}
+} */
 
-nav{
+/* nav{
     display: flex;
     position: fixed;
     /* width: 100vw; */
-    background-color: #F5EE9E;
-}
+    /* background-color: #F5EE9E; */
+/* } */ 
 
 .logo{
     font-family: 'LogoG';
@@ -37,9 +37,9 @@ nav{
     z-index: 1;
 } 
 
-#titulo{
+/* #titulo{
     font-family: 'LogoG';
-}
+} */
 
 .coyoseis{
     width: 100vw;
@@ -69,4 +69,12 @@ nav{
     color: aliceblue;
     background-color: crimson;
 }
+#lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+
 
