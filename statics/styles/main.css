@@ -25,7 +25,7 @@
 }
 
 @font-face {
-    font-family: 'Mukta';
+    font-family: 'Muktal';
     src: url('../fonts/Mukta_Vaani/MuktaVaani-Light.ttf');
 }
 
@@ -52,6 +52,7 @@ body{
 #contenido{
     grid-column-start: 2;
     grid-column-end: 3;
+    padding: 5%;
 }
 .secciones{
      border-radius: 10px;

@@ -1,42 +1,15 @@
-body{
-    background-color: #f1effe;
-    background-image: url(../img/fondoP6.jpg);
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.container-fluid{
-    background-color: #f5ba4c98;
-}
-#titulo{
-    left: 1030px;
-}
-#titulo2{
-    margin: 30px;
-    font-size: 30px;
-    color: white;
-}
-/* Crear una tarea */
-#borde{
-    display: inline-block;
-    position: relative;
-    top: 50px;
-    width: 900px;
-    left: 20px;
-    border: 2px solid;
-    border-radius: 20px;
-}
 #texto{
     position: relative;
     margin: 15px;
     font-size: 20px;
     left: 20px;
 }
-#formulario{
+/* #formulario{
     position: relative;
     display: inline-block;
     margin: 30px;
     left: 20px;
-}
+} */
 #contenedorDescripcion{
     display: inline-block;
     min-width: 500px;
@@ -48,17 +21,20 @@ body{
 }
 /* Espacificaciones */
 #borde2{
-    display: inline-block;
-    position: absolute;
-    top: 380px;
-    width: 300px;
-    left: 950px;
     border: 2px solid;
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
 }
-.especificaciones{
+#borde2>*{
+    padding: 10px;
+}
+input{
+    margin: 2px !important; 
+}
+/* .especificaciones{
     position: relative;
     display: inline-block;
     margin: 30px;
     left: 20px;
-}
+} */
