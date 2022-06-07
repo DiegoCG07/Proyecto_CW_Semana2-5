@@ -2,16 +2,18 @@
 
 ## Descripción del proyecto:
 
-a. Explicación de lo que hace tu proyecto
+### Explicación;
+El presente proyecto funge como aula virtual para los estudiantes de la Escuela Nacional Preparatoria N° 6 "Antonio Caso" UNAM.
 
-b. Expresar la importancia de tu proyecto
+### Importancia:
+Debido a la pandemia generada por el virus SARS-CoV-2, el uso de aulas virtuales se popularizó bastante. Por lo que, se requirió desarrollar un proyecto para satisfacer de una mejor manera con las necesidades particulares de los alumnos de la ENP 6.
 
 ### Tecnologías utilizadas:
-1. Hypertext Preprocessor  "PHP"
-2. JavaScript
-3. MySQL
-4. Cascading Style Sheets "CSS"
-6. HyperText Markup Language "HTML"
+1. Cascading Style Sheets "CSS"
+2. HyperText Markup Language "HTML"
+3. Hypertext Preprocessor  "PHP"
+4. JavaScript
+6. MySQL
 
 ## Instrucciones de instalación del proyecto:
 
@@ -27,11 +29,10 @@ b. También debe haber información para que otros programadores sepan cómo est
     - Debemos explicar el propósito y organización de los archivos del proyecto más importantes
 
 ## Créditos:
-
-Explica quiénes y qué hicieron cada cosa en el proyecto
-
 1. **Majo**: .
 2. **Ricardo**: .
-3. **Zarco Romero José Antonio**: .
+3. **Zarco Romero José Antonio**: Se encargó principalmente del diseño y creación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch. También, desarrolló la plantilla del juego "Ahorcado" y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado datos del usuario.
 
-## En caso de ser necesaria, la licencia del proyecto
+### Agradecimientos a:
+- Bootstrap: Framework de código abierto.
+- Unsplash.com: Fuente de internet de imágenes de uso libre.
