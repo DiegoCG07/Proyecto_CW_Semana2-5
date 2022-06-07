@@ -32,7 +32,7 @@ window.addEventListener("load", ()=>{
                     } else if(datosJSON.texto == "Alumno"){
                         window.location = "./templates/alumnos.php";
                     } else if(datosJSON.texto == "Profesor"){
-                        window.location = "./templates/maestros.php";
+                        window.location = "./templates/VistaPrinProf.php";
                     }
                 } else if(datosJSON.ok == false){
                     alert(datosJSON.texto);
