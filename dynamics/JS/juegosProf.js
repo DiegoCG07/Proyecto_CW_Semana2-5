@@ -4,14 +4,42 @@ window.addEventListener("load",()=>{
     const estado = document.getElementById("estado");
     const lista = document.getElementById("lista");
     const enviar = document.getElementById("enviar");
-    var palabras = [];
+    
     const btnEditar = document.getElementById("btn-editar");
     const btnVista = document.getElementById("btn-vista");
     const formEditar = document.getElementById("formEditar");
+    var palabras = [];
+    cargaFrases();
+
+    // Carga palabras de la pase de datos
+    function cargaFrases(){
+        palabras = [];
+        input.value = "";
+        let datosForm = new FormData();
+        // Agrego cookie
+        let ID_Clase = readCookie("ID_Clase=");
+        datosForm.append("ID_Clase",ID_Clase);
+        fetch("../dynamics/php/ahorcadoFrases.php",{
+            method:"POST",
+            body:datosForm,
+        })
+            .then((response)=>{
+                return response.json();
+            })
+            .then((datosJSON)=>{
+                if(datosJSON.ok == true){
+                    for(resultado of datosJSON.resultados){
+                        palabras.push(resultado.frase);
+                        lista.innerHTML += '<li>'+resultado.frase+' <input type="reset" value="Borrar" class="boton" id="'+resultado.frase+'"></li>';
+                    }
+                } else {
+                    alert(datosJSON.texto);
+                }
+            });
+    }
 
     btnEditar.addEventListener("click",()=>{
         formEditar.style.display = "block";
-        btnEditar.style.display = "none";
     });
 
     btnVista.addEventListener("click",()=>{

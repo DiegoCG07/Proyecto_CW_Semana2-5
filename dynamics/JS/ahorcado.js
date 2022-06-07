@@ -26,7 +26,7 @@ window.addEventListener("load",()=>{
         frases_base = [];
         let datosForm = new FormData();
         // Agrego cookie
-        let ID_Clase = readCookie("ID_Clase=")
+        let ID_Clase = readCookie("ID_Clase=");
         datosForm.append("ID_Clase",ID_Clase);
         fetch("../dynamics/php/ahorcadoFrases.php",{
             method:"POST",
