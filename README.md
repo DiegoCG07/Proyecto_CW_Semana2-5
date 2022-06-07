@@ -2,7 +2,7 @@
 
 ## Descripción del proyecto:
 
-### Explicación;
+### Explicación:
 El presente proyecto funge como aula virtual para los estudiantes de la Escuela Nacional Preparatoria N° 6 "Antonio Caso" UNAM.
 
 ### Importancia:
@@ -31,8 +31,8 @@ b. También debe haber información para que otros programadores sepan cómo est
 ## Créditos:
 1. **Majo**: .
 2. **Ricardo**: .
-3. **Zarco Romero José Antonio**: Se encargó principalmente del diseño y creación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch. También, desarrolló la plantilla del juego "Ahorcado" y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado datos del usuario.
+3. **Zarco Romero José Antonio**: Se encargó principalmente del diseño y creación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch. También, desarrolló la plantilla del juego "Ahorcado" y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado de datos del usuario.
 
 ### Agradecimientos a:
 - Bootstrap: Framework de código abierto.
-- Unsplash.com: Fuente de internet de imágenes de uso libre.
+- Unsplash: Fuente de internet de imágenes de uso libre.
