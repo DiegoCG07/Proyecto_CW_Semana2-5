@@ -1,3 +1,8 @@
+<?php
+    session_name("Sesion");
+    session_id("021e31y8d4655");
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,8 +51,11 @@
     <div id="titulo2">
         <br>
         <span>Nombre de la materia Grupo</span><br>
-        <span>Nombre del profesor(a)</span><br>
-        <span>Bienvenidx, nombre profesor</span>
+        <?php
+            echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
+
+            echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
+        ?>
     </div>
 
     <div id="borde">
@@ -81,5 +89,6 @@
 
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="../dynamics/JS/VistaClaseProf.js"></script>
 </body>
 </html>

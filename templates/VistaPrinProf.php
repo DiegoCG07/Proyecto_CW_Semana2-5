@@ -58,10 +58,10 @@
     <div id="borde">
         <br>
         <?php
-                echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
+            echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
         ?>
         
-        <div class="grupos">
+        <!-- <div class="grupos">
             <span>Clase: </span><br>
             <span>Grado: </span><br>
             <span>Grupo: </span><br>
@@ -90,12 +90,17 @@
             <span>Grado: </span><br>
             <span>Grupo: </span><br>
             <span>Código de clase: </span>
-        </div>
-        <div class="grupos">
-            <br>
-            <span>+</span><br><br>
-            <span>Agregar clase</span>
-        </div>
+        </div> -->
+        <div id="contenedorGrupos">
+
+    </div>
+        <a href="./crearClaseProf.php" target="_self">
+            <div class="grupos">
+                <br>
+                <span>+</span><br><br>
+                <span>Agregar clase</span>
+            </div>
+        </a>
     </div>
 
     <div class="opciones">
@@ -113,5 +118,6 @@
 
 
     <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
+    <script src="../dynamics/JS/VistaPrinProf.js"></script>
 </body>
 </html>
