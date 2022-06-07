@@ -3,8 +3,7 @@
     $conexion = connect();
     if(!$conexion){
         $respuesta = array("ok" => false, "texto" => "No se pudo ingresar");
-    }
-    else {
+    } else {
         session_name("Sesion");
         session_id("021e31y8d4655");
         session_start();
@@ -28,5 +27,4 @@
         }
     }
     echo json_encode($respuesta);
-
 ?>
