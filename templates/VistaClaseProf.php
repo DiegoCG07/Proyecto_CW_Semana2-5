@@ -83,6 +83,11 @@
         <div id="contacto">
             <span>Contacta a tu alumno</span>
         </div>
+        <a href="./juegosProf.php" target="_self">
+            <div id="contacto">
+                <span>Juegos</span>
+            </div>
+        </a>
     </div>
 
     

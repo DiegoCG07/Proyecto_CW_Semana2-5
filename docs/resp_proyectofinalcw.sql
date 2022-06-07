@@ -51,9 +51,12 @@ CREATE TABLE `ahorcado` (
   `ID_Palabra` int(11) NOT NULL AUTO_INCREMENT,
   `ID_cHp` int(11) NOT NULL,
   `Palabra` varchar(10) NOT NULL,
+  `ID_EstadoJuego` int(11) NOT NULL,
   PRIMARY KEY (`ID_Palabra`),
   KEY `ID_cHp` (`ID_cHp`),
-  CONSTRAINT `ahorcado_ibfk_1` FOREIGN KEY (`ID_cHp`) REFERENCES `clase_has_publicaciones` (`ID_cHp`)
+  KEY `ID_EstadoJuego` (`ID_EstadoJuego`),
+  CONSTRAINT `ahorcado_ibfk_1` FOREIGN KEY (`ID_cHp`) REFERENCES `clase_has_publicaciones` (`ID_cHp`),
+  CONSTRAINT `ahorcado_ibfk_2` FOREIGN KEY (`ID_EstadoJuego`) REFERENCES `estado_juego` (`ID_EstadoJuego`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -298,6 +301,30 @@ CREATE TABLE `email` (
 LOCK TABLES `email` WRITE;
 /*!40000 ALTER TABLE `email` DISABLE KEYS */;
 /*!40000 ALTER TABLE `email` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `estado_juego`
+--
+
+DROP TABLE IF EXISTS `estado_juego`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `estado_juego` (
+  `ID_EstadoJuego` int(11) NOT NULL AUTO_INCREMENT,
+  `EstadoJuego` char(9) NOT NULL,
+  PRIMARY KEY (`ID_EstadoJuego`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `estado_juego`
+--
+
+LOCK TABLES `estado_juego` WRITE;
+/*!40000 ALTER TABLE `estado_juego` DISABLE KEYS */;
+INSERT INTO `estado_juego` VALUES (1,'Oculto'),(2,'No oculto');
+/*!40000 ALTER TABLE `estado_juego` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -894,4 +921,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07  4:00:15
+-- Dump completed on 2022-06-07  4:30:40
