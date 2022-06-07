@@ -6,7 +6,7 @@
         if($_SESSION["ID_TipoUsuario"] == 1){
             header("location: ./templates/alumnos.php");
         } else if($_SESSION["ID_TipoUsuario"] == 2){
-            header("location: ./templates/maestros.php");
+            header("location: ./templates/VistaPrinProf.php");
         }
     }
 ?>
@@ -19,8 +19,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Inicio de Sesión</title>
         <!--stylesheets-->
-        <!-- <link rel="stylesheet" href="./statics/styles/main.css">
-        <link rel="stylesheet" href="./statics/styles/formularioInicio.css"> -->
+        <link rel="stylesheet" href="./statics/styles/main.css">
+        <link rel="stylesheet" href="./statics/styles/formularioInicio.css">
     </head>
 
     <body>
