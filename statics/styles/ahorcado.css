@@ -1,0 +1,57 @@
+@font-face {
+    font-family: "font1";
+    src: url("../fonts/ARCADE.TTF");
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.boton{
+    width: 10vw;
+    background-color: gold;
+    padding: 1em;
+    margin: 1em;
+    border: none;
+    cursor: pointer;
+}
+.boton:hover {
+    background-color: rgb(154, 132, 9);
+    color: white;
+    font-weight: bolder;
+}
+#carouselExampleControls{
+    width: 40vw;
+}
+#title{
+    font-family: "font1", "Copperplate", fantasy;
+    font-size: 20vh;
+}
+#juego{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3em;
+}
+#mi-canvas{
+    width: 35vw;
+    height: 35vw;
+    margin-bottom: 3em;
+}
+#btn-Comprobar{
+    height: 2em;
+    border-radius: 1.5em;
+    width: 2em;
+    font-size: 1em;
+    background-color: #00ff00;
+    border-color: green;
+    margin: .5em;
+}
+#btn-Comprobar:hover {
+    background-color: greenyellow;
+    cursor: pointer;
+    font-weight: bolder;
+}

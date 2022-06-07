@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../statics/media/img/icon.jpg" type="image/x-icon">
+        <title>Ahorcado</title>
+        <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.rtl.css">
+        <link rel="stylesheet" href="../statics/styles/ahorcado.css">
+    </head>
+
+    <body>
+        <h1 id="title">Juegos</h1>
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="../statics/media/img/arcade2.jpg" class="d-block w-100" alt="Arcade">
+                </div>
+                <div class="carousel-item" id="ahorcado">
+                    <img src="../statics/media/img/ahorcado.jpg" class="d-block w-100" alt="Ahorcado">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <div id="juego" style="display: none;">
+            <h1 id="total"></h1><br><br>
+            <canvas id="mi-canvas">
+                <p>Aquí va un canvas</p>
+            </canvas>
+            <h2>Vidas: <span id="vidas"></span></h2>
+            <input type="text" name="letra" id="letra" maxlength="1" placeholder="Introduzca una letra" style="text-align: center;">
+            <button id="btn-Comprobar">+</button>
+        </div>
+        <div id="botones" style="display: none;">
+            <button class="boton" id="btnRegresar">Regresar</button><br>
+            <button class="boton" id="btnJugar">Volver a jugar</button><br><br><br>
+        </div>
+
+        <script src="../dynamics/JS/ahorcado.js"></script>
+        <script src="../libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+    </body>
+
+</html>

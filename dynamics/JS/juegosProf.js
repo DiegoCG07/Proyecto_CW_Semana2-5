@@ -6,11 +6,16 @@ window.addEventListener("load",()=>{
     const enviar = document.getElementById("enviar");
     var palabras = [];
     const btnEditar = document.getElementById("btn-editar");
+    const btnVista = document.getElementById("btn-vista");
     const formEditar = document.getElementById("formEditar");
 
     btnEditar.addEventListener("click",()=>{
         formEditar.style.display = "block";
         btnEditar.style.display = "none";
+    });
+
+    btnVista.addEventListener("click",()=>{
+        window.location = "./ahorcado.html";
     });
 
     agregar.addEventListener("click", (evento) => {
@@ -61,7 +66,7 @@ window.addEventListener("load",()=>{
         let datosForm = new FormData();
         datosForm.append("arr_palabras",palabras);
         // Agrego cookie
-        let ID_Clase = readCookie("ID_Clase=")
+        let ID_Clase = readCookie("ID_Clase=");
         datosForm.append("ID_Clase",ID_Clase);
         // Estado
         let ID_EstadoJuego = estado.value;

@@ -8,6 +8,13 @@
         $ID_EstadoJuego = (isset($_POST["ID_EstadoJuego"]) && $_POST["ID_EstadoJuego"] != "") ? $_POST["ID_EstadoJuego"] : false;
         $palabras = (isset($_POST["arr_palabras"]) && $_POST["arr_palabras"] != "") ? $_POST["arr_palabras"] : false;
         $arr_palabras = explode(",", $palabras);
+
+        // Checa si existe tabla para borrarla y volver a escribir
+
+
+
+
+
         $sql = "INSERT INTO clase_has_publicaciones (ID_Clase,ID_Publicacion) VALUES ('$ID_Clase',3)";
         $res = mysqli_query($conexion, $sql);
         if($res == true){
@@ -19,7 +26,6 @@
                 if($res == true){
                     $todobien++;
                 } else {
-                    // echo mysqli_error($con);
                     $respuesta = array("ok" => false, "texto" => "No se pudo ingresar");
                 }
             }

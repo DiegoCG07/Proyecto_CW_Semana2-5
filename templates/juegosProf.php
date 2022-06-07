@@ -45,7 +45,9 @@
         <br><br><br><br><br><br><br>
         
         <button id="btn-editar">Editar ahorcado</button>
+        <button id="btn-vista">Vista Previa</button>
         <form id="formEditar" style="display: none;">
+            <br><br>
             <fieldset style="width: 400px; color: black;">
                 <legend>Editar Ahorcado</legend>
                 <br><br><label for="input">Agrega un palabra menor a 10 caracteres: </label><br><br>
