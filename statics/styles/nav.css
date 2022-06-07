@@ -27,15 +27,13 @@
 .titulo{
     font-family: 'LogoG';
     margin-left: 20px;
-    font-size: x-large;
     color:#22566B;
-    text-decoration: none;
 }
 .offcanvas{
     transition: transform 0.1s cubic-bezier(0.4, 0, 1, 1) !important;
 }
 .offcanvas-start{
-    background-color: #f5ba4c98 !important;
+    background-color: #ffffff98 !important;
     width:20% !important;
     /* position: static !important; */
     grid-column-start: 1;
