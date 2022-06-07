@@ -48,7 +48,21 @@ window.addEventListener('load', ()=>{
         evento.preventDefault()
         if(verificarDatos() == true){
            let datosForm = new FormData(formulario)
-           fetch("../dynamics/php/formCrearClase.php")
+           fetch("../dynamics/php/formCrearClase.php",{
+            method:"POST", 
+            body: datosForm,
+           })
+           .then((response)=>{
+                return response.json();
+            })
+            .then((datosJSON)=>{
+                if(datosJSON.ok == true){
+                    alert(datosJSON.texto);
+                    window.location = "./VistaPrinProf.php"
+                } else {
+                    alert(datosJSON.texto);
+                }
+            });
         }else{
             alert("nou");
         }
