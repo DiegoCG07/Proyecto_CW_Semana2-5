@@ -46,6 +46,7 @@
 }
 nav{
     position: static !important;
+    width: -webkit-fill-available;
 }
 .offcanvas-backdrop.show{
     opacity: 0 !important;
