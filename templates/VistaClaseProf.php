@@ -27,6 +27,7 @@
                     <h1 class="titulo">Coyo 6</h1>
                 </div>
                 <form class="d-flex" role="search">
+                    <a class="nav-link" href="#">Perfil: PROFESOR</a>
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
                 </form>

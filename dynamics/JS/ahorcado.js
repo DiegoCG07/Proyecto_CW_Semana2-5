@@ -71,7 +71,6 @@ window.addEventListener("load",()=>{
             carousel.style.display = "none";
             btnRegresar.style.display = "none";
             title.innerHTML = "Ahorcado";
-            title.style.marginTop = "20vw";
             juego.style.display = "flex";
             botones.style.display = "flex";
             jugando(i);
