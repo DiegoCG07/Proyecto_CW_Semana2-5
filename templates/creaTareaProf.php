@@ -103,7 +103,7 @@
                         <span>Para: Todos</span><br><br>
                         <span>Puntos: 100</span><br><br>
                         <label for="fecha">Fecha de entrega: </label>
-                        <input type="date">
+                        <input type="date" name="fecha" id="fecha">
                     </div>
                 </div>
             </section>
@@ -145,6 +145,7 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
+        <script src="../dynamics/JS/creaTareaProf.js"></script>
     </body>
 
 </html>
