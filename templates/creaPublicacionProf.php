@@ -10,14 +10,18 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Clases</title>
-        <link rel="stylesheet" href="../statics/styles/VistaClaseProf.css">
+        <!--stylesheets-->
+        <link rel="stylesheet" href="../statics/styles/creaTareaProf.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../statics/styles/nav.css">
         <link rel="stylesheet" href="../statics/styles/mainProfe.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+        <title>Nueva Tarea</title>
     </head>
+
     <body>
+        <header> </header>
+
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
@@ -31,19 +35,17 @@
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
                 </form>
-
                 <div id="iconosNav">
                     <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones">
                     <a class="nav-link dropdown-toggle"id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
+                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/templates/PerfilProf.php">Perfl</a></li>
                         <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
-                    
                 </div>
             </div>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -53,10 +55,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="./VistaPrinProf.php">Mis cursos</a>
+                            <a class="nav-link" href="http://localhost/Proyecto_CW_Semana2-5/templates/VistaPrinProf.php">Mis cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link active" aria-current="page" href="http://localhost/Proyecto_CW_Semana2-5/templates/foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Calendario</a>
@@ -66,49 +68,50 @@
                         </li>
                     </ul>
                 </div>
-            </div>         
+            </div>    
         </nav>
 
-
         <div id="titulo2">
-            <span class="coyoseis">Coyo 6</span>
+            <span>Nombre de la materia Grupo</span><br>
         </div>
 
         <div id="contenedor">
+              
             <section id="contenido" class="secciones">
                 <?php
                     echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
-                ?> 
-                <div id="generarTarea">
-                    <a href="./creaTareaProf.php">Generar una Tarea</a>
-                </div>
-                <div id="generarPublicacion">
-                    <a href="./creaPublicacionProf.php">Generar una Publicación</a>
-                </div>
-                <h1>Tareas: </h1>
-                <div id="tareas"></div>
-                <form action="./VistaPrinProf.php" method="post" style="margin: 3em;">
-                    <button id="btn-Regresar">Regresar</button>
-                </form>
-            </section>
+                    echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
+                ?>
+                <span id="texto">Crea una publicación</span><br><br>
+                
+                
+                <div id="borde2">
+                    <form action="" id="formulario">
 
-            <aside class="secciones">
-                <div class="opciones">
-                    <div id="calendario" class="elementosAside">
-                        <span>Calendario</span>
-                    </div>
-                    <div id="avisos" class="elementosAside">
-                        <span>Avisos</span>
-                    </div>
-                    <a href="./juegosProf.php" target="_self">
-                        <div class="elementosAside">
-                            <span>Juegos</span>
-                        </div>
-                    </a>
+                        <label for="titulo">Título: </label><br>
+                        <input type="text" name="titulo" id="titulo"><br><br>
+
+                        <!-- Aqui no supe cómo hacerle para que desplegara la descripcion conforme se vaya escribiendo, asi q con CSS solo le puse el tamaño xd -->
+                        <div id="contenedorDescripcion">
+                            <label for="descripcion">Descripción: </label>
+                            <input type="text" name="descripcion" id="descripcion"><br><br>
+                        </div><br><br>
+
+                        <input type="file" name="material" id="material"><br><br>
+
+                        <button id="btnEnviar">Crear Publicación</button>
+                    </form>
+                </div>
+            </section>
+            <aside class="secciones"> 
+                <div id="calendario" class="elementosAside">
+                    <span>Calendario</span>
+                </div>
+                <div id="participantes" class="elementosAside">
+                    <span>Participantes</span>
                 </div>
             </aside>
         </div>
-
         <footer>
             <div class="footer">
                 <span>
@@ -134,11 +137,11 @@
                     </ul>
                 </span>
             </div>
+            
         </footer>
 
-        
-        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
-        <script src="../dynamics/JS/VistaClaseProf.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
+        <script src="../dynamics/JS/creaMaterialProf.js"></script>
     </body>
 
 </html>
