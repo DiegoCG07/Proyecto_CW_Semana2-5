@@ -35,7 +35,7 @@
                         <input type="email" name="correo" id="correo" required placeholder="Correo"> <br><br>
 
                         <label for="contrasena"></label>
-                        <input type="text" name="contrasena" id="contrasena" required placeholder="Contraseña"> <br><br>
+                        <input type="password" name="contrasena" id="contrasena" required placeholder="Contraseña"> <br><br>
 
                         <a href="./dynamics/php/IntentoContraseña.php">¿Olvidaste tu contraseña o nombre de usuario?</a> <br><br>
                         
