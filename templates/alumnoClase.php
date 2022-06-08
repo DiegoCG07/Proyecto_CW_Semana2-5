@@ -6,14 +6,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8"> 
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--stylesheets-->
         <link rel="stylesheet" href="../statics/styles/">
         <link rel="stylesheet" href="../statics/styles/main.css">
-        <link rel="stylesheet" href="../statics/styles/nav.css">
-        <link rel="stylesheet" href="../statics/styles/mainAlumn.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
         <title>Coyo-Clases</title>
     </head>
@@ -43,7 +41,7 @@
                         <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
                         <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
                     
                 </div>
@@ -55,10 +53,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/Proyecto_CW_Semana2-5/templates/alumnoInicio.php">Mis cursos</a>
+                            <a class="nav-link" href="./alumnoInicio.php">Mis cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost/Proyecto_CW_Semana2-5/templates/foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link active" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Calendario</a>
@@ -96,7 +94,7 @@
                 <select name="publicaciones" id="publicaciones"  class="contenidoClase">
                     <option value="1">Asignaciones</option>
                     <option value="2">Material</option>
-                </select> <br><br>
+                </select> 
 
                <div id="tareas" style="display: none;"  class="contenidoClase">
                     <span>Asignaciones</span>

@@ -5,17 +5,20 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--stylesheets-->
+        <title>Principal</title>
+        <link rel="stylesheet" href="../statics/styles/alumnoTablero.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
-        <title>Coyo-Clases</title>
     </head>
+
     <body>
-        <header> </header>
+    
+        <!-- BARRA DE NAVEGACION -->
 
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
@@ -37,10 +40,10 @@
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Perfl</a></li>
+                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
                         <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
                     
                 </div>
@@ -52,10 +55,10 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/Proyecto_CW_Semana2-5/templates/alumnoInicio.php">Mis cursos</a>
+                            <a class="nav-link" href="./alumnoInicio.php">Mis cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost/Proyecto_CW_Semana2-5/templates/foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link active" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Calendario</a>
@@ -73,21 +76,23 @@
         </div>
 
         <div id="contenedor">
-            <section id="contenido" class="secciones">
+        <section id="contenido" class="secciones">
                 <?php
-                    echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
-                    echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
+                    echo "<h1>¡Bienvenidx, ".$_SESSION["Usuario"]."!</h1>";
                 ?>
-
-                <span>Inscríbete una clase: </span>
-
-                <form action="" id="formulario">
-                    <label for="codigo">Código de Clase: </label>
-                    <input type="text" name="codigo" id="codigo">
-            
-                    <button type="submit" id="btnEnviar">Enviar</button>
-                </form>
-                <!-- contenido general -->
+                <a href="./alumnoInscripcion.php" target="_self">
+                    Inscribirme a una nueva clase
+                </a> 
+                <div id="clases">
+                    <!-- <div class="card">       sugerencia para poner clase
+                        <img src="..." class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Materia: </h5>
+                            <p class="card-text">Profesor: </p>
+                            <a href="./alumnoClase.php" class="btn btn-primary">Ver</a>
+                        </div>
+                    </div> -->
+                </div>
             </section>
 
             <aside class="secciones">
@@ -102,35 +107,31 @@
                 </div>
             </aside>
         </div>
-
+        
         <footer>
             <div class="footer">
                 <span>
                     <h5>Sitios de interés</h5>
                     <ul>
-                        <li><a href="http://enp.unam.mx/" target="_blank">DGENP</a></li>
+                        <li><a href="http://enp.unam.mx/" target="_blank">Página Oficial de la ENP</a></li>
                         <li><a href="https://www.prepa6.unam.mx/ENP6/_P6/" target="_blank">Página oficial ENP 6</a></li>
                     </ul>
                 </span>
                 <span>
-                    <h5>Contactos y condiciones</h5>
-                </span>
-                <span>
                     <h5>Aviso Legal</h5>
-                    <p>Hecho en México, todos los derechos reservados 2022-2022.</p>       
+                    <p>Hecho en México, todos los derechos reservados 2022-2022.</p>
+                    <a href="./creditos.html">Créditos</a>       
                 </span>
                 <span>
-                    <h5>Créditos</h5>
-                    <ul>
-                        <li>Majo</li>
-                        <li>Ricardo</li>
-                        <li>José Zarco</li>
-                    </ul>
-                </span>
+                    <h5>Contactos y condiciones</h5>
+                </span> 
             </div>
         </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="../dynamics/JS/alumnoInscrip.js"></script>
+        
+
+        <script src="../libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
+        <script src="../dynamics/JS/alumnoTablero.js"></script>
     </body>
+
 </html>

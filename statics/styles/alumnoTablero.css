@@ -1,0 +1,17 @@
+.card{
+    display: inline-block;
+    width: 20vw;
+    
+    margin: 20px;
+}
+
+.card-body{
+    color: aliceblue;
+    background-color: #C4C4C4;
+}
+#lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
