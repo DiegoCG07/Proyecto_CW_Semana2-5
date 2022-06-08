@@ -36,7 +36,7 @@ window.addEventListener("load",()=>{
                     let dudasForo = document.getElementById("dudasForo");
                     dudasForo.innerHTML = "";
                     for(resultado of datosJSON.resultados){
-                        dudasForo.innerHTML += "<div class='optPredeterminada' id='"+resultado.id+"'><span id='pregunta'>"+resultado.pregunta+"</div>";
+                        dudasForo.innerHTML += "<div class='optPredeterminada' id='"+resultado.id+"'><span id='pregunta'>"+resultado.pregunta+"</span><br><span id='datos'>Alumno: "+resultado.Num_Cuenta+"<br>Fecha: "+resultado.Fecha+"</span><br><button class='boton' id='Responder'>Responder</button></div>";
                     }
                 } else {
                     alert(datosJSON.texto);
