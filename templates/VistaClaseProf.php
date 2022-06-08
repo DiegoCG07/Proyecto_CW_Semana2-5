@@ -2,6 +2,7 @@
     session_name("Sesion");
     session_id("021e31y8d4655");
     session_start();
+    $_SESSION["ID_Clase"] = (isset($_COOKIE["ID_Clase"]) && $_COOKIE["ID_Clase"] != "") ? $_COOKIE["ID_Clase"] : false;
 ?>
 <!DOCTYPE html>
 <html lang="en">

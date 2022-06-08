@@ -13,8 +13,6 @@
         <!--stylesheets-->
         <link rel="stylesheet" href="../statics/styles/creaTareaProf.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
-        <link rel="stylesheet" href="../statics/styles/nav.css">
-        <link rel="stylesheet" href="../statics/styles/mainProfe.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
         <title>Nueva Tarea</title>
     </head>
@@ -72,7 +70,7 @@
         </nav>
 
         <div id="titulo2">
-            <span>Nombre de la materia Grupo</span><br>
+            <span>Coyo 6</span><br>
         </div>
 
         <div id="contenedor">
@@ -86,13 +84,13 @@
                 
                 
                 <div id="borde2">
-                    <form action="" id="formulario">
+                    <!-- <form action="./creaPublicacionProf.php" id="formulario" method="post">
 
                         <label for="titulo">Título: </label><br>
-                        <input type="text" name="titulo" id="titulo"><br><br>
+                        <input type="text" name="titulo" id="titulo"><br><br> -->
 
                         <!-- Aqui no supe cómo hacerle para que desplegara la descripcion conforme se vaya escribiendo, asi q con CSS solo le puse el tamaño xd -->
-                        <div id="contenedorDescripcion">
+                        <!-- <div id="contenedorDescripcion">
                             <label for="descripcion">Descripción: </label>
                             <input type="text" name="descripcion" id="descripcion"><br><br>
                         </div><br><br>
@@ -100,7 +98,74 @@
                         <input type="file" name="material" id="material"><br><br>
 
                         <button id="btnEnviar">Crear Publicación</button>
-                    </form>
+                    </form> -->
+                    <?php
+                        echo "
+                            <form action='./creaPublicacionProf.php' id='formulario' method='post' enctype='multipart/form-data'>
+
+                            <label for='titulo'>Título: </label><br>
+                            <input type='text' name='titulo' id='titulo'><br><br>
+
+                            <!-- Aqui no supe cómo hacerle para que desplegara la descripcion conforme se vaya escribiendo, asi q con CSS solo le puse el tamaño xd -->
+                            <div id='contenedorDescripcion'>
+                                <label for='descripcion'>Descripción: </label>
+                                <input type='text' name='descripcion' id='descripcion'><br><br>
+                            </div><br><br>
+
+                            <input type='file' name='archivo' id='archivo'><br><br>
+
+                            <button id='btnEnviar'>Crear Publicación</button>
+                            </form>
+                        ";
+    
+                        $titulo = (isset($_POST["titulo"]) && $_POST["titulo"] != "") ?$_POST["titulo"] : false;
+                        $descripcion = (isset($_POST["descripcion"]) && $_POST["descripcion"] != "") ?$_POST["descripcion"] : false;
+
+                        if($titulo != "" && $descripcion!="" && isset($_FILES['archivo'])){
+                            $name = $_FILES['archivo']['name'];
+                            $ext = pathinfo($name,PATHINFO_EXTENSION);
+
+                            if($ext=="png" || $ext=="jpg" || $ext=="jpeg" || $ext=="gif" || $ext=="bmp" || $ext=="txt" || $ext=="doc" || $ext=="docx" || $ext=="ppt" || $ext=="pptx" || $ext=="pdf" || $ext=="xls"){
+                                $arch=$_FILES['archivo']['tmp_name'];
+                                $nombreArchivo = $_SESSION["ID_Clase"]."_".$titulo.".".$ext;
+                                $ruta = "../statics/files/material/$nombreArchivo";
+                                rename($arch,$ruta);
+
+                                // PETICION
+                                include("../dynamics/php/config.php");
+                                $conexion = connect();
+                                if(!$conexion){
+                                    echo "No se pudo conectar a la base";
+                                } else {
+                                    $sql = "INSERT INTO ruta_archivo (Ruta) VALUES ('$ruta')";
+                                    $res = mysqli_query($conexion, $sql);
+                                    if($res == true){
+                                        $ID_RutaArchivo = mysqli_insert_id($conexion);
+                                        $ID_Clase = $_SESSION["ID_Clase"];
+                                        $sql = "INSERT INTO clase_has_publicaciones (ID_Clase,ID_Publicacion) VALUES ('$ID_Clase',1)";
+                                        $res = mysqli_query($conexion, $sql);
+                                        if($res == true){
+                                            $ID_cHp = mysqli_insert_id($conexion);
+                                            $fecha = date('Y-m-d h:i:s');
+                                            $sql = "INSERT INTO material (ID_cHp,Nombre,Descripcion,Fecha_Asignacion,ID_RutaArchivo) VALUES ($ID_cHp,'$titulo','$descripcion','$fecha',$ID_RutaArchivo)";
+                                            $res = mysqli_query($conexion, $sql);
+                                            if($res == true){
+                                                echo "<strong>Tu archivo se subio correctamente</strong><br><br>";
+                                            } else {
+                                                echo "No se pudo crear el material";
+                                            }
+                                        } else {
+                                            echo "No se creo la publicación";
+                                        }
+                                    } else {
+                                        echo "No se pudo conectar a la base";
+                                    }
+                                }
+                            } else {
+                                echo "$name  No se puede subir";
+                            }
+                        }
+                    ?>
                 </div>
             </section>
             <aside class="secciones"> 
