@@ -10,7 +10,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Coyo 6</title>
-        <link rel="stylesheet" href="../statics/styles/main.css")>
+        <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../statics/styles/nav.css">
         <link rel="stylesheet" href="../statics/styles/mainProfe.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
@@ -79,6 +79,9 @@
                 <?php
                     echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
                 ?>
+
+                <div id="contenedorGrupos"></div>
+                
                 <a href="./crearClaseProf.php" target="_self">
                     <div class="grupos">
                         <br>
@@ -86,7 +89,6 @@
                         <span>Agregar clase</span>
                     </div>
                 </a> 
-
             </section> 
 
             <aside class="secciones">
@@ -130,7 +132,7 @@
         
        
 
-        <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
         <script src="../dynamics/JS/VistaPrinProf.js"></script>
     </body>
 </html>

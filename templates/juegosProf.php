@@ -1,3 +1,8 @@
+<?php
+    session_name("Sesion");
+    session_id("021e31y8d4655");
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 

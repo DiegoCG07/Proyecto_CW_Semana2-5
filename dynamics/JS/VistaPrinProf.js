@@ -7,10 +7,8 @@ window.addEventListener("load", () =>{
             if(datosJSON.ok == true){
                 let contenedorGrupos = document.getElementById("contenedorGrupos");
                 contenedorGrupos.innerHTML = "";
-                //console.log(datosJSON);
                 for(resultado of datosJSON.resultado){
-                    contenedorGrupos.innerHTML += "<div id='"+ resultado.ID_Clase +"' class='grupos'><span>Clase: "+ resultado.Materia +"</span><br><span>Grupo: "+ resultado.Grupo +"</span><br><span>Código de clase: "+ resultado.ID_Clase +"</span></div>";
-                    //selectgrupo.innerHTML+="<option value='"+resultado.id+"'>"+resultado.numero+"</option>";
+                    contenedorGrupos.innerHTML += "<div id='"+ resultado.ID_Clase +"' class='grupos'>Clase: "+ resultado.Materia +"<br>Grupo: "+ resultado.Grupo +"<br>Código de clase: "+ resultado.ID_Clase +"</div>";
                 }
             } else {
                 alert(datosJSON.texto);
@@ -20,6 +18,7 @@ window.addEventListener("load", () =>{
     contenedorGrupos.addEventListener("click", (evento) =>{
         let claseSeleccionada = evento.target.id;
         console.log(claseSeleccionada);
+        console.log(evento.target);
         if(claseSeleccionada != ''){
             document.cookie = 'ID_Clase ='+claseSeleccionada;
             window.location = "./VistaClaseProf.php";

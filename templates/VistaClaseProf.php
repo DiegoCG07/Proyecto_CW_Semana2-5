@@ -12,7 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Clases</title>
         <link rel="stylesheet" href="../statics/styles/VistaClaseProf.css">
-        <link rel="stylesheet" href="../statics/styles/main.css")>
+        <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../statics/styles/nav.css">
         <link rel="stylesheet" href="../statics/styles/mainProfe.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
@@ -106,6 +106,11 @@
                     <div id="avisos" class="elementosAside">
                         <span>Avisos</span>
                     </div>
+                    <a href="./juegosProf.php" target="_self">
+                        <div class="elementosAside">
+                            <span>Juegos</span>
+                        </div>
+                    </a>
                 </div>
             </aside>
         </div>
