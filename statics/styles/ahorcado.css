@@ -3,7 +3,7 @@
     src: url("../fonts/ARCADE.TTF");
 }
 body{
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-flow: column;
     justify-content: center;

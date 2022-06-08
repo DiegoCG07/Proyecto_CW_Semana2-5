@@ -1,0 +1,43 @@
+/* body{
+    padding: 2em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+} */
+.optPredeterminada{
+    background-color: aliceblue;
+    padding: 2em;
+    margin: 1.5em;
+    border-radius: 4em;
+}
+#predeterminadas{
+    background-color: sandybrown;
+    width: 70vw;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 2em;
+}
+#dudas{
+    background-color: aquamarine;
+    width: 70vw;
+    padding: 1em;
+    margin: 1em;
+    border-radius: 2em;
+}
+#pregunta{
+    font-weight: bolder;
+}
+#respuesta{
+    display: block;
+    text-align: justify;
+    position: relative;
+    left: 10%;
+    margin-right: 10%;
+}
+#preguntaForo{
+    text-align: center;
+    border: none;
+    width: 60vw;
+    border-radius: 2em;
+}

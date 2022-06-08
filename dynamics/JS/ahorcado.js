@@ -65,13 +65,16 @@ window.addEventListener("load",()=>{
     const btnRegresar = document.getElementById("btn-Regresar");
 
     ahorcado.addEventListener("click",()=>{
-        carousel.style.display = "none";
-        btnRegresar.style.display = "none";
-        title.innerHTML = "Ahorcado";
-        title.style.marginTop = "20vw";
-        juego.style.display = "flex";
-        botones.style.display = "flex";
-        jugando(i);
+        if(frases_base.length == 0){
+            alert("No se han registrado palabras");
+        } else {
+            carousel.style.display = "none";
+            btnRegresar.style.display = "none";
+            title.innerHTML = "Ahorcado";
+            juego.style.display = "flex";
+            botones.style.display = "flex";
+            jugando(i);
+        }
     });
 
     function fondo(){

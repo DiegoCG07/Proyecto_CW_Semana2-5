@@ -4,7 +4,7 @@
     session_start();
     if(isset($_SESSION["ID_TipoUsuario"])){
         if($_SESSION["ID_TipoUsuario"] == 1){
-            header("location: ./templates/alumnos.php");
+            header("location: ./templates/alumnoInicio.php");
         } else if($_SESSION["ID_TipoUsuario"] == 2){
             header("location: ./templates/VistaPrinProf.php");
         }

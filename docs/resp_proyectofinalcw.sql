@@ -608,7 +608,7 @@ CREATE TABLE `pregunta_predeterminada` (
   `Pregunta` text NOT NULL,
   `Respuesta` text NOT NULL,
   PRIMARY KEY (`ID_Predeterminada`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -617,6 +617,7 @@ CREATE TABLE `pregunta_predeterminada` (
 
 LOCK TABLES `pregunta_predeterminada` WRITE;
 /*!40000 ALTER TABLE `pregunta_predeterminada` DISABLE KEYS */;
+INSERT INTO `pregunta_predeterminada` VALUES (1,'¿Cuándo son las reinscripciones?','El calendario escolar establece las fechas en las cuales se realizará el proceso de reinscripciones. Aproximadamente un mes antes de esa fecha se publica en la página del plantel y en el Portal del Alumno la Guía de Reinscripción donde se describen todos los pasos para reinscribirse al siguiente ciclo escolar.'),(2,'¿Qué son las actividades estéticas?','Educación Estética y Artística IV y Educación Estética y Artística V son asignaturas que forman parte del plan de estudios de la Escuela Nacional Preparatoria. Los estudiantes cursan estas asignaturas obligatorias en cuarto y quinto año a través de las actividades estéticas.'),(3,'¿Cuándo me puedo inscribir a las actividades estéticas?','Al inicio de cada ciclo escolar, los estudiantes deben seleccionar una actividad estética y realizar la solicitud de inscripción de la misma. La información sobre el proceso de registro se publica en la página del plantel y en el Portal del Alumno.'),(4,'¿Cuántos intentos tengo para presentar un examen extraordinario?','Sólo cuentas con 1 intento, y únicamente podrá ser aprovechado durante la fecha y hora establecida en el Calendario de Exámenes Extraordinarios que se aprobó por el H. Consejo Técnico.'),(5,'¿Cuál es la diferencia entre un examen final y un examen extraordinario?','El examen final es el que realizas al no haber cumplido con el promedio previamente dicho por el profesor para aprobar su materia, tienes 2 oportunidades para pasar el examen. El examen extraordinario es el que realizas al no haber aprobado el examen final y en caso de no aprobarlo tienes que repetir la materia.'),(6,'¿Cómo puedo cambiarme de turno?','Acude a servicios escolares de tu plantel o a la Dirección General de Administración Escolar y obtén la información necesaria para realizar el trámite.'),(7,'¿Cómo tramitar mi certificado de ENP?','En el portal de la Dirección General de la Escuela Nacional Preparatoria encontrarás toda la información necesaria: http://dgenp.unam.mx/ure/certificado.html'),(8,'¿Cómo solicito una constancia de estudio?','Los alumnos del Plantel pueden descargar constancias de estudio desde el Portal del Alumno. En caso de requerir una constancia de estudio con información adicional o un historial académico, debes enviar un correo (desde tu correo de alumno con dominio alumno.enp.unam.mx) al correo escolares.p6@enp.unam.mx.'),(9,'¿Cuáles son los pasos para la Recuperación de NIP SIAE?','Si extraviaste u olvidaste el NIP del Sistema Integral de Administración Escolar (SIAE), deberás solicitar la reposición desde tu correo INSTITUCIONAL (@alumno.enp.unam.mx) a escolares.p6@enp.unam.mx');
 /*!40000 ALTER TABLE `pregunta_predeterminada` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -921,4 +922,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07  4:30:40
+-- Dump completed on 2022-06-07 18:10:21

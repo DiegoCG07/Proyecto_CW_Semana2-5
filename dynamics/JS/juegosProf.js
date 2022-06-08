@@ -52,7 +52,7 @@ window.addEventListener("load",()=>{
         if(input.value.length <= 10 && input.value != ""){
             let palabraExist = false;
             for(let i=0; i<palabras.length; i++){
-                if(input.value == palabras[i]){
+                if(input.value.toUpperCase() == palabras[i]){
                     palabraExist = true;
                 }
             }
@@ -120,7 +120,6 @@ window.addEventListener("load",()=>{
     enviar.addEventListener("click", (evento) => {
         evento.stopPropagation();
         evento.preventDefault();
-        // console.log(palabras);
         subePalabras();
     });
 });
