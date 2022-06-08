@@ -91,3 +91,58 @@ h5{
     color: #0A191F !important;
     text-decoration: none !important;
 }
+
+#titulo2{
+    background-image: url(../media/img/FondoPagProf.jpg);
+    background-size: cover;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+.coyoseis{
+    position: relative;
+    font-family: 'LogoG';
+    font-size: 5vw;
+    color: aliceblue;
+}
+
+#bienvenida{
+    margin: 15px;
+    font-size: 25px;
+}
+
+.grupos{
+    display: flex;
+    flex-flow: row wrap;
+    /* display: inline-block;
+    position: relative; */
+    width: 200px;
+    height: 200px;
+    /* left: 20px; */
+    background-color: #C4C4C4;
+    margin: 35px;
+    text-align: center;
+    border-radius: 9px;
+    font-size: 15px;
+    border-radius: 20px;
+}
+
+.opciones{
+    /* display: flex inline-block;
+    flex-direction: row; */
+    /* position: absolute; */
+    width: 310px;
+    left: 1000px;
+    /* top: 330px; */
+}
+.elementosAside{
+    /* position: relative; */
+    width: auto;
+    height: auto;
+    background-color: #C4C4C4;
+    text-align: center;
+    /* display: inline-block; */
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 15px
+}
