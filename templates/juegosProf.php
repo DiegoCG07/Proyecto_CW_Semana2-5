@@ -102,8 +102,9 @@
                 </form>
                 
                 <form action="./VistaClaseProf.php" method="post">
-                    <button id="btn-Regresar">Regresar</button>
+                    <br><br><button id="btn-Regresar">Regresar</button>
                 </form>
+                <br><br><br><br><br><br><br><br><br><br>
                 
             </section> 
 
