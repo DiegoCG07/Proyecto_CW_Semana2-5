@@ -40,10 +40,10 @@
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="#">Perfl</a></li>
-                        <li><a class="dropdown-item" href="#">Preferencias</a></li>
+                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/templates/PerfilProf.php">Perfl</a></li>
+                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="#">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,18 +53,17 @@
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Página Inicial</a>
+                            <a class="nav-link" href="http://localhost/Proyecto_CW_Semana2-5/templates/VistaPrinProf.php">Mis cursos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Calendario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Mis Cursos</a>
+                            <a class="nav-link" href="#">Tablón</a>
                         </li>
                     </ul>
                 </div>
@@ -121,8 +120,8 @@
                 <span>
                     <h5>Sitios de interés</h5>
                     <ul>
-                        <li><a href="">DGENP</a></li>
-                        <li><a href="">Página oficial ENP 6</a></li>
+                        <li><a href="http://enp.unam.mx/" target="_blank">DGENP</a></li>
+                        <li><a href="https://www.prepa6.unam.mx/ENP6/_P6/" target="_blank">Página oficial ENP 6</a></li>
                     </ul>
                 </span>
                 <span>
@@ -133,7 +132,12 @@
                     <p>Hecho en México, todos los derechos reservados 2022-2022.</p>       
                 </span>
                 <span>
-                    <h5 href="">Créditos</h5>
+                    <h5>Créditos</h5>
+                    <ul>
+                        <li>Majo</li>
+                        <li>Ricardo</li>
+                        <li>José Zarco</li>
+                    </ul>
                 </span>
             </div>
             
