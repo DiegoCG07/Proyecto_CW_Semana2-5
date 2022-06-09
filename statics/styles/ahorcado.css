@@ -3,17 +3,17 @@
     src: url("../fonts/ARCADE.TTF");
 }
 body{
-    /* height: 100vh; */
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
 }
+
 .boton{
     width: 10vw;
-    background-color: gold;
     padding: 1em;
     margin: 1em;
+    background-color: gold;
     border: none;
     cursor: pointer;
 }
@@ -22,6 +22,7 @@ body{
     color: white;
     font-weight: bolder;
 }
+
 #carouselExampleControls{
     width: 40vw;
 }
@@ -56,8 +57,6 @@ body{
     font-weight: bolder;
 }
 #btn-Regresar{
-    background-color: orange;
-    color: white;
     cursor: pointer;
     font-weight: bolder;
     border: 0;
@@ -65,4 +64,6 @@ body{
     padding-left: 1em;
     padding-right: 1em;
     border-radius: 1em;
+    background-color: orange;
+    color: white;
 }

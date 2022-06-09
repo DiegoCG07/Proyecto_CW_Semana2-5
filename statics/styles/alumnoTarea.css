@@ -1,9 +1,8 @@
 #borde2{
+    display: grid;
     border: solid;
     border-width: thin;
     border-radius: 10px;
-    display: grid;
     padding: 2%;
     color: #aaaab7;
-
 }

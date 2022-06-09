@@ -2,16 +2,15 @@
     margin: 15px;
     font-size: 25px;
 }
-
 #btn-Regresar{
-    background-color: orange;
-    color: white;
+    margin: 3em;
+    border: 0;
     cursor: pointer;
     font-weight: bolder;
-    border: 0;
-    margin: 3em;
     padding-left: 1em;
     padding-right: 1em;
     border-radius: 1em;
+    background-color: orange;
+    color: white;
 }
 
