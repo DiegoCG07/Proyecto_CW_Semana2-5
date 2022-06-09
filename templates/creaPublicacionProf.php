@@ -30,8 +30,6 @@
                 </div>
                 <form class="d-flex" role="search">
                     <a class="nav-link" href="#">Perfil: PROFESOR</a>
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
                 </form>
                 <div id="iconosNav">
                     <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones">
@@ -39,10 +37,9 @@
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/templates/PerfilProf.php">Perfl</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
+                        <li><a class='dropdown-item' href='./perfilUsuario.php'>Perfl</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
                 </div>
             </div>
@@ -53,7 +50,7 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/Proyecto_CW_Semana2-5/templates/VistaPrinProf.php">Mis cursos</a>
+                            <a class="nav-link" href="./VistaPrinProf.php">Mis cursos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="http://localhost/Proyecto_CW_Semana2-5/templates/foroPreguntas.php">Foro de preguntas</a>
@@ -84,21 +81,6 @@
                 
                 
                 <div id="borde2">
-                    <!-- <form action="./creaPublicacionProf.php" id="formulario" method="post">
-
-                        <label for="titulo">Título: </label><br>
-                        <input type="text" name="titulo" id="titulo"><br><br> -->
-
-                        <!-- Aqui no supe cómo hacerle para que desplegara la descripcion conforme se vaya escribiendo, asi q con CSS solo le puse el tamaño xd -->
-                        <!-- <div id="contenedorDescripcion">
-                            <label for="descripcion">Descripción: </label>
-                            <input type="text" name="descripcion" id="descripcion"><br><br>
-                        </div><br><br>
-
-                        <input type="file" name="material" id="material"><br><br>
-
-                        <button id="btnEnviar">Crear Publicación</button>
-                    </form> -->
                     <?php
                         echo "
                             <form action='./creaPublicacionProf.php' id='formulario' method='post' enctype='multipart/form-data'>

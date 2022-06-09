@@ -31,8 +31,6 @@
                 </div>
                 <form class="d-flex" role="search">
                     <a class="nav-link" href="#">Perfil: PROFESOR</a>
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
                 </form>
                 <div id="iconosNav">
                     <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones">
@@ -40,8 +38,7 @@
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
+                        <li><a class='dropdown-item' href='./perfilUsuario.php'>Perfl</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>

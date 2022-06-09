@@ -12,10 +12,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Foro de preguntas</title>
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
-        <!-- <link rel="stylesheet" href="../statics/styles/foroPreguntas.css"> -->
         <link rel="stylesheet" href="../statics/styles/main.css">
-        <link rel="stylesheet" href="../statics/styles/nav.css">
-        <link rel="stylesheet" href="../statics/styles/mainAlumn.css">
         <link rel="stylesheet" href="../statics/styles/foroPreguntas.css">
     </head>
 
@@ -37,8 +34,6 @@
                             echo "<a class='nav-link' href='#'>Perfil: PROFESOR</a>";
                         }
                     ?>
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
                 </form>
 
                 <div id="iconosNav">
@@ -47,16 +42,9 @@
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <?php
-                            if($_SESSION["ID_TipoUsuario"] == 1){
-                                echo "<li><a class='dropdown-item' href='#'>Perfl</a></li>";
-                            } else if($_SESSION["ID_TipoUsuario"] == 2){
-                                echo "<li><a class='dropdown-item' href='http://localhost/Proyecto_CW_Semana2-5/templates/PerfilProf.php'>Perfl</a></li>";
-                            }
-                        ?>
-                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
+                        <li><a class='dropdown-item' href='./perfilUsuario.php'>Perfl</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
+                        <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
                     
                 </div>
@@ -70,14 +58,14 @@
                         <li class="nav-item">
                         <?php
                             if($_SESSION["ID_TipoUsuario"] == 1){
-                                echo "<a class='nav-link' href='http://localhost/Proyecto_CW_Semana2-5/templates/alumnoInicio.php'>Mis cursos</a>";
+                                echo "<a class='nav-link' href='./alumnoInicio.php'>Mis cursos</a>";
                             } else if($_SESSION["ID_TipoUsuario"] == 2){
-                                echo "<a class='nav-link' href='http://localhost/Proyecto_CW_Semana2-5/templates/VistaPrinProf.php'>Mis cursos</a>";
+                                echo "<a class='nav-link' href='./VistaPrinProf.php'>Mis cursos</a>";
                             }
                         ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost/Proyecto_CW_Semana2-5/templates/foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link active" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Calendario</a>
