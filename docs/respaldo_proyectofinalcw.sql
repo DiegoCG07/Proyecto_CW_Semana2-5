@@ -144,8 +144,8 @@ CREATE TABLE `alumno_has_tarea` (
   `ID_aHt` int(11) NOT NULL AUTO_INCREMENT,
   `Num_Cuenta` int(11) NOT NULL,
   `ID_Tarea` int(11) NOT NULL,
-  `Calificacion` int(11) NOT NULL,
-  `ID_RutaArchivo` int(11) NOT NULL,
+  `Calificacion` int(11) DEFAULT NULL,
+  `ID_RutaArchivo` int(11) DEFAULT NULL,
   `ID_EstadoTarea` int(11) NOT NULL,
   `Fecha_Entrega` datetime NOT NULL,
   PRIMARY KEY (`ID_aHt`),
@@ -738,13 +738,10 @@ CREATE TABLE `tarea` (
   `Nombre` char(255) NOT NULL,
   `Descripcion` text NOT NULL,
   `Fecha_asignacion` datetime NOT NULL,
-  `ID_RutaArchivo` int(11) NOT NULL,
   `Fecha_limite` datetime NOT NULL,
   PRIMARY KEY (`ID_Tarea`),
   KEY `ID_cHp` (`ID_cHp`),
-  KEY `ID_RutaArchivo` (`ID_RutaArchivo`),
-  CONSTRAINT `tarea_ibfk_1` FOREIGN KEY (`ID_cHp`) REFERENCES `clase_has_publicaciones` (`ID_cHp`),
-  CONSTRAINT `tarea_ibfk_2` FOREIGN KEY (`ID_RutaArchivo`) REFERENCES `ruta_archivo` (`ID_RutaArchivo`)
+  CONSTRAINT `tarea_ibfk_1` FOREIGN KEY (`ID_cHp`) REFERENCES `clase_has_publicaciones` (`ID_cHp`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -922,4 +919,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-07 18:10:21
+-- Dump completed on 2022-06-08 17:00:19

@@ -15,11 +15,11 @@ Debido a la pandemia generada por el virus SARS-CoV-2, el uso de aulas virtuales
 3. Hypertext Preprocessor  `PHP`
 4. `JavaScript`
 5. `MySQL`
-6. `GIT`
+6. `Git`
 
 ## Instrucciones de instalación del proyecto:
 
-1. Descargar un servidor local que contenga un sistema de gestion de base de datos, sugerimos **XAMPP**.
+1. Descargar un servidor local que contenga un sistema de gestión de base de datos, sugerimos el manejador de red **XAMPP**.
 2. Prender el servidor local. En caso de que tu servidor local sea *Xampp* activar **Apache** y **MySQL**.
 3. Descargar la base de datos dentro de la carpeta: `C:/xampp/mysql/bin`.
 4. Acceder mediante la terminal con la ruta antes mencionada y ejecutar el comando: 
@@ -42,7 +42,7 @@ GRANT DELETE, INSERT, SELECT, UPDATE ON proyectofinal_cw.* TO ‘proyectocw’@�
 ```
     Con la contraseña "bimbunuelos6"
 
-9. Una vez completadas las instrucciones anteriores editar el archivo **_config.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
+9. Una vez completadas las instrucciones anteriores editar el archivo **config-plantilla.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
 
 10. En caso de no existir la carpeta *Files* dentro de **Statics** crearla y dentro de ella crear 2 capretas llamadas *material* y *tarea* para almacenar los archivos subidos.
 
@@ -60,9 +60,10 @@ Información para el programador:
 - **Dynamics:**
 
     Esta carptea se encuentra subdividida en archivos **JS** y **PHP** respectivamente, vitales en el funcionamiento del proyecto.
-    **JS:** Contiene los archivos necesarios para hacer del proyecto una interfaz web interactiva.
+
+    - **JS:** Contiene los archivos necesarios para hacer del proyecto una interfaz web interactiva.
         
-    **PHP:** Contiene los archivos necesarios para hacer la conexion y el uso de información almacenada en bases de datos.
+    - **PHP:** Contiene los archivos necesarios para hacer la conexion y el uso de información almacenada en bases de datos.
 
 - **Statics:**
 
@@ -78,9 +79,9 @@ Información para el programador:
 
 
 ## Créditos:
-1. **Majo:** 
-2. **Rodríguez Sánchez Ricardo:** Desarrollo del diseño y vistas del profesor, administrador, moderador y perfil de todos los usuarios.
-3. **Zarco Romero José Antonio:** Se encargó principalmente del diseño y creación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch. También, desarrolló la plantilla del juego "Ahorcado" y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado de datos del usuario.
+1. **María José García Olán:** La implementación de diseño general del proyecto y estructuras generales en las vistas, optimización de código, el desarrollo de maquetado y partes del funcionamiento de las vistas de alumno mediante.  
+2. **Rodríguez Sánchez Ricardo:** Desarrollo del diseño general del proyecto y vistas del profesor, administrador, moderador y perfil de todos los usuarios.
+3. **Zarco Romero José Antonio:** Se encargó principalmente del diseño, creación y documentación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch y el uso de archivos PHP. También, desarrolló la plantilla del juego "Ahorcado", el foro de preguntas y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado de datos del usuario.
 
 ### Agradecimientos a:
 - Bootstrap: Framework de código abierto.

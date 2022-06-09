@@ -37,7 +37,7 @@
                         <label for="contrasena"></label>
                         <input type="password" name="contrasena" id="contrasena" required placeholder="Contraseña"> <br><br>
 
-                        <a href="./dynamics/php/IntentoContraseña.php">¿Olvidaste tu contraseña o nombre de usuario?</a> <br><br>
+                        <a href="./templates/FormularioRegistro.html">¿No te has registrado?</a> <br><br>
                         
                         <button type="submit" id="btn-inicio">Iniciar sesión</button><br><br>
 
