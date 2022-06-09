@@ -40,3 +40,7 @@
     padding-left: 1em;
     padding-right: 1em;
 }
+#fechasPredeterminadas{
+    display: flex;
+    justify-content: center;
+}

@@ -12,12 +12,14 @@ window.addEventListener("load",()=>{
     const flechaDespues = document.getElementById("flechaDespues");
     const datos = document.getElementById("datos");
     const dias = document.getElementById("dias");
+    const fechasPredeterminadas = document.getElementById("fechasPredeterminadas");
 
     function despliegaDatos(){
         fecha.setFullYear(año,mes,dia);
         datos.innerHTML = meses[mes] + " " + año;
         let diasTotales = new Date(año, mes, 0).getDate();
         dias.innerHTML = "";
+        fechasPredeterminadas.innerHTML = "";
         let empiezaMes = new Date(año,mes,1).getDay();
         for(let i=empiezaMes;i>0;i--){
             dias.innerHTML += "<div class='calendario' id='dia'></div>";
@@ -27,7 +29,7 @@ window.addEventListener("load",()=>{
             if(fechasIguales(mes+1,i)==true){
                 let divFechaCalendario = document.createElement("div");
                 divFechaCalendario.innerHTML = "<div class='calendario' id='dia'><span id='fechaCalendario'>"+i+"</span></div>";
-                divFechaCalendario.addEventListener("click",datosFecha);
+                // divFechaCalendario.addEventListener("click",datosFecha);
                 dias.appendChild(divFechaCalendario)
             } else {
                 dias.innerHTML += "<div class='calendario' id='dia'>"+i+"</div>";
@@ -57,6 +59,8 @@ window.addEventListener("load",()=>{
         for(date of calendario){
             if(mes==date.mesCalendario&&dia==date.diaCalendario){
                 igual=true;
+                let fechasPredeterminadas = document.getElementById("fechasPredeterminadas");
+                fechasPredeterminadas.innerHTML += "<br><br>Asunto: "+date.Asunto+"<br>Fecha: "+date.diaCalendario+" de "+meses[mes-1]+"<br>Tipo: "+date.TipoFecha;
             }
         }
         return igual;
