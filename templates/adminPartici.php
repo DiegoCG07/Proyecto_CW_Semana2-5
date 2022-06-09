@@ -1,26 +1,20 @@
-<?php
-    session_name("Sesion");
-    session_id("021e31y8d4655");
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
-
+        
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- stylesheets-->
-        <title>Juegos</title>
+        <!--stylesheets-->
+        <title>Participantes</title>
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
+        <link rel="stylesheet" href="../statics/styles/VistaParticiProfe.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
-    
-    <body>
-        <header> </header>
 
-        <nav class="navbar bg-light fixed-top">
+    <body>
+    <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -29,21 +23,23 @@
                     <h1 class="titulo">Coyo 6</h1>
                 </div>
                 <form class="d-flex" role="search">
-                    <a class="nav-link" href="#">Perfil: PROFESOR</a>
+                    <a class="nav-link" href="./vistaPrinAdmin.php">Perfil: ADMINISTRADOR</a>
                     <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
                 </form>
+
                 <div id="iconosNav">
                     <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones">
                     <a class="nav-link dropdown-toggle"id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/templates/PerfilProf.php">Perfl</a></li>
+                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
                         <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="http://localhost/Proyecto_CW_Semana2-5/dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
+                        <!-- <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li> -->
                     </ul>
+                    
                 </div>
             </div>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -53,10 +49,14 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="http://localhost/Proyecto_CW_Semana2-5/templates/VistaPrinProf.php">Mis cursos</a>
+                            <a class="nav-link" href="./adminClases.php">Clases</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="http://localhost/Proyecto_CW_Semana2-5/templates/foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link" href="./adminPartici.php">Usuarios</a>
+                            <!-- vista de profes y alumnos -->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Calendario</a>
@@ -66,53 +66,57 @@
                         </li>
                     </ul>
                 </div>
-            </div>    
+            </div>         
         </nav>
 
         <div id="titulo2">
-            <br>
-            <span>Nombre de la materia Grupo</span><br>
-            
+            <span class="coyoseis">Coyo 6</span>
         </div>
+
         <div id="contenedor">
             <section id="contenido" class="secciones">
-                <?php
-                    echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
-                    echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
-                ?>
-                <button id="btn-editar">Editar ahorcado</button>
-                <button id="btn-vista">Vista Previa</button>
                 
-                <form id="formEditar" style="display: none;">
-                    <br><br>
-                    <fieldset style="width: 400px; color: black;">
-                        <legend>Editar Ahorcado</legend>
-                        <br><br><label for="input">Agrega un palabra menor a 10 caracteres: </label><br><br>
-                        <input type="text" name="input" id="input" maxlength="10">
-                        <button id="agregar">Agregar</button>
-                        <ul id="lista"></ul><br>
-                        <label for="estado">Estado del juego: </label>
-                        <select name="estado" id="estado">
-                            <option value="1">Oculto</option>
-                            <option value="2">No oculto</option>
-                        </select><br><br>
-                        <button id="enviar">Enviar</button>
-                    </fieldset>
-                </form>
+                <span id='bienvenida'>¡Bienvenidx, Administrador</span><br><br>
                 
-                <form action="./VistaClaseProf.php" method="post">
-                    <br><br><button id="btn-Regresar">Regresar</button>
-                </form>
-                <br><br><br><br><br><br><br><br><br><br>
-                
-            </section> 
-
-            <aside class="secciones"> 
-                <div id="calendario" class="elementosAside">
-                    <span>Calendario</span>
+                <div id="alumnos">
+                    <span>Usuarios</span>
                 </div>
-                <div id="participantes" class="elementosAside">
-                    <span>Participantes</span>
+
+                <div class="descripcionAlumnos">
+                    <span>Nombre del profesor: </span><br>
+                    <span>Correo: </span><br>
+                    <span>Númeo de trabajador: </span>
+                </div>
+                <div class="descripcionAlumnos">
+                    <span>Nombre del profesor: </span><br>
+                    <span>Correo: </span><br>
+                    <span>Númeo de trabajador: </span>
+                </div>
+                <div class="descripcionAlumnos">
+                    <span>Nombre del profesor: </span><br>
+                    <span>Correo: </span><br>
+                    <span>Númeo de trabajador: </span>
+                </div>
+                <div class="descripcionAlumnos">
+                    <span>Nombre del alumno: </span><br>
+                    <span>Correo: </span><br>
+                    <span>Número de cuenta: </span>
+                </div>
+                <div class="descripcionAlumnos">
+                    <span>Nombre del alumno: </span><br>
+                    <span>Correo: </span><br>
+                    <span>Número de cuenta: </span>
+                </div>
+            </section>
+
+            <aside class="secciones">
+                <div class="opciones">
+                    <div id="calendario" class="elementosAside">
+                        <span>Calendario</span>
+                    </div>
+                    <div id="avisos" class="elementosAside">
+                        <span>Avisos</span>
+                    </div>
                 </div>
             </aside>
         </div>
@@ -142,12 +146,10 @@
                     </ul>
                 </span>
             </div>
-            
         </footer>
 
 
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
-        <script src="../dynamics/JS/juegosProf.js"></script>
     </body>
 
 </html>
