@@ -36,22 +36,23 @@
                         $sql = "INSERT INTO alumno_has_tarea (Num_Cuenta,ID_Tarea,ID_EstadoTarea,Fecha_Entrega) VALUES ('$Num_Cuenta',$ID_Tarea,2,'$fechaLimite')";
                         $res = mysqli_query($conexion, $sql);
                         if($res == true){
-                            $respuesta = array("ok" => true, "texto" => "Se creo la tarea");
+                            $respuesta = array("ok" => true, "texto" => "Se creo la tarea y asigno la tarea");
                         } else {
-                            echo mysqli_error($conexion);
+                            // echo mysqli_error($conexion);
                             $respuesta = array("ok" => false, "texto" => "No se asigno la tarea");
                         }
                     }
+                    $respuesta = array("ok" => true, "texto" => "Se creo la tarea");
                 } else {
-                    echo mysqli_error($conexion);
+                    // echo mysqli_error($conexion);
                     $respuesta = array("ok" => false, "texto" => "No se encontraron alumnos");
                 }
             } else {
-                echo mysqli_error($conexion);
+                // echo mysqli_error($conexion);
                 $respuesta = array("ok" => false, "texto" => "No se creo la tarea");
             }
         } else {
-            echo mysqli_error($conexion);
+            // echo mysqli_error($conexion);
             $respuesta = array("ok" => false, "texto" => "No se creo la puublicacion");
         }
     }
