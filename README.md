@@ -44,6 +44,8 @@ GRANT DELETE, INSERT, SELECT, UPDATE ON proyectofinal_cw.* TO ‘proyectocw’@�
 
 9. Una vez completadas las instrucciones anteriores editar el archivo **_config.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
 
+10. En caso de no existir la carpeta *Files* dentro de **Statics** crearla y dentro de ella crear 2 capretas llamadas *material* y *tarea* para almacenar los archivos subidos.
+
 ## Instrucciones de uso del proyecto:
 Instrucciones para el usuario:
 1. Abrir el archivo **index.php** en tu navegador desde el servidor local.
