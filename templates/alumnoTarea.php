@@ -1,3 +1,8 @@
+<?php
+    session_name("Sesion");
+    session_id("021e31y8d4655");
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,10 +10,8 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--stylesheets-->
-        <link rel="stylesheet" href="../statics/styles/">
         <link rel="stylesheet" href="../statics/styles/main.css">
-        <link rel="stylesheet" href="../statics/styles/nav.css">
-        <link rel="stylesheet" href="../statics/styles/mainAlumn.css">
+        <link rel="stylesheet" href="../statics/styles/alumnoTarea.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
         <title>Coyo-Clases</title>
     </head>
@@ -69,23 +72,43 @@
         </div>
 
         <div id="contenedor">
+              
             <section id="contenido" class="secciones">
-               <!-- contenido general -->
-            </section>
+                <?php
+                    echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
+                ?>
+                
+                <div id="tareas">
+                    <div id="borde2">
+                        <p>Título: </p>
+                        <p>Descripción: </p>
+                        <p>Fecha de asignación: </p>
+                        <p>Ponderación: 100</p>
+                        <p>Fecha de entrega:</p>
+                        <p>Estado: </p>
+                        <p>Calificación: </p>
+                        <button id="btnAñadir">Añadir envío</button>
+                        <div id="archivo" style="display: none">
+                            <!-- <form action=""> -->
+                                <label for="nombreArchivo">
+                                    <input type="file" name="archivoTarea" id="nombreArchivo">
+                                </label>
+                                <button id="btnEnviar">Enviar</button>
+                            <!-- </form> -->
 
-            <aside class="secciones">
-                <div class="opciones">
-                    <!-- Juegos educativos-->
-                    <div id="calendario" class="elementosAside">
-                        <span>Calendario</span>
+                        </div>    
                     </div>
-                    <div id="avisos" class="elementosAside">
-                        <span>Avisos</span>
-                    </div>
+                </div>
+            </section>
+            <aside class="secciones"> 
+                <div id="calendario" class="elementosAside">
+                    <span>Calendario</span>
+                </div>
+                <div id="participantes" class="elementosAside">
+                    <span>Participantes</span>
                 </div>
             </aside>
         </div>
-
         <footer>
             <div class="footer">
                 <span>
@@ -109,5 +132,6 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../dynamics/js/alumnoTarea.js"></script>
     </body>
 </html>

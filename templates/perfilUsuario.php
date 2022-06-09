@@ -12,8 +12,6 @@
         <!--stylesheets-->
         <link rel="stylesheet" href="../statics/styles/PerfilProf.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
-        <link rel="stylesheet" href="../statics/styles/nav.css">
-        <link rel="stylesheet" href="../statics/styles/mainAlumn.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
         <title>Coyo-Clases</title>
     </head>
@@ -29,8 +27,13 @@
                     <h1 class="titulo">Coyo 6</h1>
                 </div>
                 <form class="d-flex" role="search">
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
+                    <?php
+                        if($_SESSION["ID_TipoUsuario"] == 1){
+                            echo "<a class='nav-link' href='#'>Perfil: ALUMNO</a>";
+                        } else if($_SESSION["ID_TipoUsuario"] == 2){
+                            echo "<a class='nav-link' href='#'>Perfil: PROFESOR</a>";
+                        }
+                    ?>
                 </form>
                 <div id="iconosNav">
                     <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones">
@@ -38,8 +41,7 @@
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
+                        <li><a class='dropdown-item' href='./perfilUsuario.php'>Perfl</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
@@ -52,7 +54,13 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="./VistaPrinProf.php">Mis cursos</a>
+                            <?php
+                                if($_SESSION["ID_TipoUsuario"] == 1){
+                                    echo "<a class='nav-link' href='./alumnoInicio.php'>Mis cursos</a>";
+                                } else if($_SESSION["ID_TipoUsuario"] == 2){
+                                    echo "<a class='nav-link' href='./VistaPrinProf.php'>Mis cursos</a>";
+                                }
+                            ?>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
@@ -75,9 +83,6 @@
             <br>
             <span>Perfil</span>
         </div>
-        <!-- <div id="borde">
-            
-        </div> -->
         
 
         <div id="contenedor">
@@ -86,21 +91,56 @@
                     <span>General</span>
                 </div>
                 <div class="contenido">
-                    <span class="pregunta">Nombre: </span>
-                    <span class="descripcion">Juan</span>
-                    <span class="pregunta">Apellidos: </span>
-                    <span class="descripcion">Perez Lopez</span>
-                    <span class="pregunta">Dirección de Email: </span>
-                    <span class="descripcion">Juanito@gmail.com</span>
-                    <span class="pregunta">Nombre de Usuario: </span>
-                    <span class="descripcion">JuanitoElPro</span>
-                    <span class="pregunta">Número Telefónico: </span>
-                    <span class="descripcion">5511223344</span>
-                    <span class="pregunta">Número de Trabajador: </span>
-                    <span class="descripcion">AAAA123456AAA</span>
-                    
+                    <?php
+                        echo "
+                        <span class='pregunta'>Nombre: </span>
+                            <span class='descripcion'>";
+                            echo $_SESSION["Nombre"];
+                        echo "
+                            </span>
+                        <span class='pregunta'>Apellidos: </span>
+                            <span class='descripcion'>";
+                            echo $_SESSION["Apellidos"];
+                        echo "
+                            </span>
+                        <span class='pregunta'>Dirección de Email: </span>
+                            <span class='descripcion'>";
+                            echo $_SESSION["Email"];
+                        echo "
+                            </span>
+                        <span class='pregunta'>Nombre de Usuario: </span>
+                            <span class='descripcion'>";
+                            echo $_SESSION["Usuario"];
+                        echo "
+                            </span>
+                        <span class='pregunta'>Número Telefónico: </span>
+                            <span class='descripcion'>";
+                            echo $_SESSION["Telefono"]."</span>";
+                        if($_SESSION["ID_TipoUsuario"] == 1){
+                            echo "
+                            <span class='pregunta'>Número de Cuenta: </span>
+                                <span class='descripcion'>";
+                                echo $_SESSION["Num_Cuenta"]."</span>";
+                            echo "
+                            <span class='pregunta'><br>Grado: <br></span>
+                                <span class='descripcion'>";
+                                echo $_SESSION["Grado"]."</span>";
+                            echo "
+                            <span class='pregunta'><br>Grupo: <br></span>
+                                <span class='descripcion'>";
+                                echo $_SESSION["Grupo"]."</span>";
+                            echo "
+                            <span class='pregunta'><br>Turno: <br></span>
+                                <span class='descripcion'>";
+                                echo $_SESSION["Turno"]."</span>";
+                        } else if($_SESSION["ID_TipoUsuario"] == 2){
+                            echo "
+                            <span class='pregunta'>Número de Trabajador: </span>
+                                <span class='descripcion'>";
+                                echo $_SESSION["Num_Trabajador"]."</span>";
+                        }
+                    ?>
                 </div>
-               <!-- contenido general -->
             </section>
 
             <aside class="secciones">
@@ -109,9 +149,6 @@
                         <span>Nombre</span>
                     </div>
                 </div>
-                <!-- Juegos educativos
-                Calendario
-                Avisos -->
             </aside>
         </div>
 
