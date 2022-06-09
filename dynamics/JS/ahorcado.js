@@ -62,14 +62,14 @@ window.addEventListener("load",()=>{
     const letraIntroducida = document.getElementById("letra");
     const botones = document.getElementById("botones");
     const total = document.getElementById("total");
-    const btnRegresar = document.getElementById("btn-Regresar");
+    // const btnRegresar = document.getElementById("btnRegresar");
 
     ahorcado.addEventListener("click",()=>{
         if(frases_base.length == 0){
             alert("No se han registrado palabras");
         } else {
             carousel.style.display = "none";
-            btnRegresar.style.display = "none";
+            // btnRegresar.style.display = "none";
             title.innerHTML = "Ahorcado";
             juego.style.display = "flex";
             botones.style.display = "flex";
@@ -148,7 +148,7 @@ window.addEventListener("load",()=>{
         } else if(evento.target.id == "btnRegresar"){
             inicializarV();
             carousel.style.display = "flex";
-            btnRegresar.style.display = "flex";
+            evento.target.style.display = "flex";
             title.innerHTML = "Juegos";
             title.style.marginTop = "0";
             juego.style.display = "none";

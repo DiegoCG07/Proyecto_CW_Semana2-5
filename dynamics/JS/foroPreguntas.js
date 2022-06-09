@@ -8,6 +8,7 @@ window.addEventListener("load",()=>{
     //
     const preguntaForo = document.getElementById("preguntaForo");
     const agregar = document.getElementById("agregar");
+    const dudasForo = document.getElementById("dudasForo");
     // const cancelar = document.getElementById("cancelar");
 
     fetch("../dynamics/php/Predeterminadas.php")
@@ -36,7 +37,17 @@ window.addEventListener("load",()=>{
                     let dudasForo = document.getElementById("dudasForo");
                     dudasForo.innerHTML = "";
                     for(resultado of datosJSON.resultados){
-                        dudasForo.innerHTML += "<div class='optPredeterminada' id='"+resultado.id+"'><span id='pregunta'>"+resultado.pregunta+"</span><br><span id='datos'>Alumno: "+resultado.Num_Cuenta+"<br>Fecha: "+resultado.Fecha+"</span><br><button class='boton' id='Responder'>Responder</button></div>";
+                        let divPreguntaForo = document.createElement("div");
+                        divPreguntaForo.innerHTML = "<div class='optPredeterminada' id='"+resultado.id+"'><span id='pregunta'>"+resultado.pregunta+"</span><br><span id='datos'>Alumno: "+resultado.Num_Cuenta+"<br>Fecha: "+resultado.Fecha+"</span><br><button class='boton' id='Responder'>Responder</button></div>";
+                        divPreguntaForo.dataset.tarea = resultado.id;
+                        divPreguntaForo.addEventListener("click", btnPresionado);
+
+                        
+                        // let divRespuestasForo = document.createElement("div");
+                        // divRespuestasForo.innerHTML = "aqui van las respuestas";
+                        // divPreguntaForo.innerHTML += divRespuestasForo;
+
+                        dudasForo.appendChild(divPreguntaForo);
                     }
                 } else {
                     alert(datosJSON.texto);
@@ -90,5 +101,33 @@ window.addEventListener("load",()=>{
             alert("No se ingreso ninguna pregunta");
         }
     });
+
+    // dudasForo.addEventListener("click",(evento)=>{
+    //     if(evento.target.id == "Responder"){
+    //         console.log("btnResponder");
+    //     }
+    // });
+    function btnPresionado(evento){
+        if(evento.target.id == "Responder"){
+            // console.log(evento.currentTarget);
+            let divClickeado = evento.currentTarget;
+            divClickeado.innerHTML += "<form><input type='text' name='preguntaForo' id='respuestaForo' placeholder='Escribe tu respuesta'><br><button type='submit' id='subirRespuesta'>+</button><button type='reset' id='cancelar'>Cancelar</button></form>";
+            
+            divClickeado.addEventListener("click", btnResponder);
+        }
+    }
+    function btnResponder(evento){
+        evento.stopPropagation();
+        evento.preventDefault();
+        if(evento.target.id == "subirRespuesta"){
+            console.log(evento.currentTarget);
+            if(respuestaForo.value != ""){
+                // subirPregunta();
+                // preguntaForo.value = "";
+            } else {
+                alert("No se ingreso ninguna respuesta");
+            }
+        }
+    }
 
 });

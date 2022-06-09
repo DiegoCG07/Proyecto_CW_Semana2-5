@@ -16,6 +16,8 @@ body{
     background-color: gold;
     border: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 .boton:hover {
     background-color: rgb(154, 132, 9);
@@ -55,15 +57,4 @@ body{
     background-color: greenyellow;
     cursor: pointer;
     font-weight: bolder;
-}
-#btn-Regresar{
-    cursor: pointer;
-    font-weight: bolder;
-    border: 0;
-    margin: 3em;
-    padding-left: 1em;
-    padding-right: 1em;
-    border-radius: 1em;
-    background-color: orange;
-    color: white;
 }

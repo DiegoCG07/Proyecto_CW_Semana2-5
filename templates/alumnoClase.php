@@ -94,6 +94,7 @@
                 <select name="publicaciones" id="publicaciones"  class="contenidoClase">
                     <option value="1">Asignaciones</option>
                     <option value="2">Material</option>
+                    <option value="3">Juego</option>
                 </select> 
 
                <div id="tareas" style="display: none;"  class="contenidoClase">
@@ -102,6 +103,11 @@
 
                 <div id="material" style="display: none;"  class="contenidoClase">
                     <span>Material</span>
+                </div>
+                <div id="juegos">
+                    <form action="./ahorcado.html" method="post">
+                        <button id="ahorcado" style="display: none;">Ahorcado</button>
+                    </form>
                 </div>
                 <!-- <div id="tablón" style="display: none;">
                     <span>Aisgnaciones</span>

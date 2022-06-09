@@ -3,16 +3,23 @@ window.addEventListener("load", ()=>{
     const selectP = document.getElementById("publicaciones");
     const divMaterial = document.getElementById("material");
     const divTareas = document.getElementById("tareas");
+    const ahorcado = document.getElementById("ahorcado");
 
     selectP.addEventListener("click",()=>{
         if(selectP.value == 1){
             divTareas.style.display = "block";
             muestraTareas();
             divMaterial.style.display = "none";
+            ahorcado.style.display = "none";
         } else if(selectP.value == 2) {
             muestraPublicaciones();
             divTareas.style.display = "none";
             divMaterial.style.display = "block";
+            ahorcado.style.display = "none";
+        } else if(selectP.value == 3) {
+            divTareas.style.display = "none";
+            divMaterial.style.display = "none";
+            revisaEstadoJuego();
         }
     });
 
@@ -27,6 +34,38 @@ window.addEventListener("load", ()=>{
         return contenidoCookie;
     }
     var misCookies = document.cookie;
+
+    function revisaEstadoJuego(){
+        let datosForm = new FormData();
+        // Agrego cookie
+        let ID_Clase = readCookie("ID_Clase=");
+        datosForm.append("ID_Clase",ID_Clase);
+        fetch("../dynamics/php/revisaEstadoJuego.php",{
+            method:"POST",
+            body:datosForm,
+        })
+            .then((response)=>{
+                return response.json();
+            })
+            .then((datosJSON)=>{
+                if(datosJSON.ok == true){
+                    if(datosJSON.ID_EstadoJuego == 2){
+                        console.log(datosJSON.ID_EstadoJuego);
+                        ahorcado.style.display = "block";
+                    } else {
+                        let juegos = document.getElementById("juegos");
+                        juegos.innerHTML = "No se han creado juegos";
+                    }
+                } else {
+                    if(datosJSON.texto == "No se han creado juegos"){
+                        let juegos = document.getElementById("juegos");
+                        juegos.innerHTML = "No se han creado juegos";
+                    } else {
+                        alert(datosJSON.texto);
+                    }
+                }
+            });
+    }
 
     function muestraTareas(){
         let datosForm = new FormData();
