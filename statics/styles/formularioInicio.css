@@ -2,26 +2,27 @@ body{
     background-image: url("../media/img/p6.jpg");
     background-size: cover;
 }
+
 .contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-position: center;
     background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
 }
 
 .form{
-    width: 239px;
-    height: 361px;
-    left: 438px;
-    top: 72px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    left: 438px;
+    top: 72px;
+    width: 239px;
+    height: 361px;
     background-color: rgba(252, 183, 118, 0.74);
     border-radius: 20px;
     padding: 2em;
 }
+    

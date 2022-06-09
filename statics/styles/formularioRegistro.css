@@ -4,14 +4,13 @@ body{
 }
 
 .contenido{
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
 }
-
 .form{
     width: 239px;
     left: 438px;
