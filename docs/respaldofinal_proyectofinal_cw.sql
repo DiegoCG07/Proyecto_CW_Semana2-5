@@ -37,6 +37,7 @@ CREATE TABLE `administrador` (
 
 LOCK TABLES `administrador` WRITE;
 /*!40000 ALTER TABLE `administrador` DISABLE KEYS */;
+INSERT INTO `administrador` VALUES ('ADMINISTRADOR1',1);
 /*!40000 ALTER TABLE `administrador` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -269,7 +270,7 @@ CREATE TABLE `contrasena` (
   `Contrasena_hash` varchar(255) NOT NULL,
   `Sal` varchar(255) NOT NULL,
   PRIMARY KEY (`ID_Contrasena`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -278,6 +279,7 @@ CREATE TABLE `contrasena` (
 
 LOCK TABLES `contrasena` WRITE;
 /*!40000 ALTER TABLE `contrasena` DISABLE KEYS */;
+INSERT INTO `contrasena` VALUES (1,'5101d7b3251e47627aa2bd794d925097d670f9641a18bb074425487bcb940d7c','62a224ad60662');
 /*!40000 ALTER TABLE `contrasena` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -292,7 +294,7 @@ CREATE TABLE `email` (
   `ID_Email` int(11) NOT NULL AUTO_INCREMENT,
   `Email` varchar(255) NOT NULL,
   PRIMARY KEY (`ID_Email`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -301,6 +303,7 @@ CREATE TABLE `email` (
 
 LOCK TABLES `email` WRITE;
 /*!40000 ALTER TABLE `email` DISABLE KEYS */;
+INSERT INTO `email` VALUES (1,'admin1@gmail.com');
 /*!40000 ALTER TABLE `email` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -900,7 +903,7 @@ CREATE TABLE `usuario` (
   CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`ID_Email`) REFERENCES `email` (`ID_Email`),
   CONSTRAINT `usuario_ibfk_2` FOREIGN KEY (`ID_Contrasena`) REFERENCES `contrasena` (`ID_Contrasena`),
   CONSTRAINT `usuario_ibfk_3` FOREIGN KEY (`ID_TipoUsuario`) REFERENCES `tipousuario` (`ID_TipoUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -909,6 +912,7 @@ CREATE TABLE `usuario` (
 
 LOCK TABLES `usuario` WRITE;
 /*!40000 ALTER TABLE `usuario` DISABLE KEYS */;
+INSERT INTO `usuario` VALUES (1,1,1,4,'ADMIN','UNO');
 /*!40000 ALTER TABLE `usuario` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -921,4 +925,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-09 10:53:14
+-- Dump completed on 2022-06-09 12:58:58
