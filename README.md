@@ -80,7 +80,7 @@ Información para el programador:
 
 ## Créditos:
 1. **María José García Olán:** La implementación de diseño general del proyecto y estructuras generales en las vistas, optimización de código, el desarrollo de maquetado y partes del funcionamiento de las vistas de alumno mediante.  
-2. **Rodríguez Sánchez Ricardo:** Desarrollo del diseño general del proyecto y vistas del profesor, administrador, moderador y perfil de todos los usuarios.
+2. **Rodríguez Sánchez Ricardo:** Desarrollo de Figmas, diseño general del proyecto y vistas del profesor, administrador y perfil de todos los usuarios.
 3. **Zarco Romero José Antonio:** Se encargó principalmente del diseño, creación y documentación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch y el uso de archivos PHP. También, desarrolló la plantilla del juego "Ahorcado", el foro de preguntas, el calendario, el tablón de alumnos y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado de datos del usuario.
 
 ### Agradecimientos a:
