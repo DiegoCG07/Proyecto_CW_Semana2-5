@@ -16,9 +16,8 @@
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
     <body>
-        <header> </header>
 
-        <nav class="navbar bg-light fixed-top">
+    <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -26,20 +25,24 @@
                     </button>
                     <h1 class="titulo">Coyo 6</h1>
                 </div>
-                <form class="d-flex" role="search">
-                    <a class="nav-link" href="#">Perfil: ALUMNO</a>
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
-                </form>
+                <div>
+                    <?php
+                        if($_SESSION["ID_TipoUsuario"] == 1){
+                            echo "<a class='nav-link' href='./perfilUsuario.php'>Perfil: ALUMNO</a>";
+                        } else if($_SESSION["ID_TipoUsuario"] == 2){
+                            echo "<a class='nav-link' href='./perfilUsuario.php'>Perfil: PROFESOR</a>";
+                        }else if($_SESSION["ID_TipoUsuario"] == 4){
+                            echo "<a class='nav-link' href='./perfilUsuario.php'>Perfil: ADMIN";
+                        }
+                    ?>
+                </div>
 
                 <div id="iconosNav">
-                    <!-- <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones"> -->
                     <a class="nav-link dropdown-toggle"id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
+                        <li><a class='dropdown-item' href='./perfilUsuario.php'>Perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
@@ -53,84 +56,82 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="./alumnoInicio.php">Mis cursos</a>
+                        <?php
+                            if($_SESSION["ID_TipoUsuario"] == 1){
+                                echo "<a class='nav-link' href='./alumnoTablero.php'>Mis cursos</a>";
+                            } else if($_SESSION["ID_TipoUsuario"] == 2){
+                                echo "<a class='nav-link' href='./VistaPrinProf.php'>Mis cursos</a>";
+                            }else if($_SESSION["ID_TipoUsuario"] == 4){
+                                echo "<a class='nav-link' href='./VistaPrinAdmin.php'>Página Inicial</a>";
+                            }
+                        ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link active" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Calendario</a>
+                            <a class="nav-link" href="./calendario.html">Calendario</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tablón</a>
-                        </li>
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="">Mis Cursos</a>
-                        </li> -->
                     </ul>
                 </div>
             </div>         
         </nav>
 
-        <div id="titulo2">
-            <span class="coyoseis">NOMBRE CLASE</span>
-        </div>
+        <div id="body">
+            <div id="titulo2">
+                <span class="coyoseis">NOMBRE CLASE</span>
+            </div>
 
-        <div id="contenedor">
-            <section id="contenido" class="secciones">
-                <?php
-                        echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
-                    echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
-                ?>
+            <div id="contenedor">
+                <section id="contenido" class="secciones">
+                    <?php
+                            echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
+                        echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
+                    ?>
 
-                <!--planeo ponerle un evento para que muestre solo tareas o solo material-->
-                <div class="contenidoClase">
-                    <span>Avisos generales</span>
-                    <div id="avisos" style="display: none;">
+                    <!--planeo ponerle un evento para que muestre solo tareas o solo material-->
+                    <div class="contenidoClase">
+                        <span>Avisos generales</span>
+                        <div id="avisos" style="display: none;">
+                            
+                        </div>
+                    </div>
                         
-                    </div>
-                </div>
-                    
-                <select name="publicaciones" id="publicaciones"  class="contenidoClase">
-                    <option value="1">Asignaciones</option>
-                    <option value="2">Material</option>
-                    <option value="3">Juego</option>
-                </select> 
+                    <select name="publicaciones" id="publicaciones"  class="contenidoClase">
+                        <option value="1">Asignaciones</option>
+                        <option value="2">Material</option>
+                        <option value="3">Juego</option>
+                    </select> 
 
-               <div id="tareas" style="display: none;"  class="contenidoClase">
-                    <span>Asignaciones</span>
-                </div>
-
-                <div id="material" style="display: none;"  class="contenidoClase">
-                    <span>Material</span>
-                </div>
-                <div id="juegos">
-                    <form action="./ahorcado.html" method="post">
-                        <button id="ahorcado" style="display: none;">Ahorcado</button>
-                    </form>
-                </div>
-                <!-- <div id="tablón" style="display: none;">
-                    <span>Aisgnaciones</span>
-                </div> -->
-            </section>
-
-            <aside class="secciones">
-                <div class="opciones">
-                    <!-- Juegos educativos-->
-                    <div id="calendario" class="elementosAside">
-                        <a href="./alumnoCalendario.php" class="linksVistas">Calendario</a>
-                    </div>  
-                    <div id="foro" class="elementosAside">
-                        <a href="./alumnoForo.php" class="linksVistas">Foro de Dudas</a>
-                    </div>      
-                    <div id="calificaciones" class="elementosAside">
-                        <a href="./alumnoCalificaciones.php" class="linksVistas">Calificaciones</a>
+                <div id="tareas" style="display: none;"  class="contenidoClase">
+                        <span>Asignaciones</span>
                     </div>
-                    <div id="contacto" class="elementosAside" href="./alumnoContacto.php">
-                        <a href="./alumnoContacto.php" class="linksVistas">Contacta a tu profesor</a>
+
+                    <div id="material" style="display: none;"  class="contenidoClase">
+                        <span>Material</span>
                     </div>
-                </div>
-            </aside>
+                    <div id="juegos">
+                        <form action="./ahorcado.html" method="post">
+                            <button id="ahorcado" style="display: none;">Ahorcado</button>
+                        </form>
+                    </div>
+                    <!-- <div id="tablón" style="display: none;">
+                        <span>Aisgnaciones</span>
+                    </div> -->
+                </section>
+
+                <aside class="secciones">
+                    <div class="opciones">
+                        <!-- Juegos educativos-->
+                        <div id="calendario" class="elementosAside">
+                            <a href="./Calendario.html" class="linksVistas">Calendario</a>
+                        </div>  
+                        <div id="foro" class="elementosAside">
+                            <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
         </div>
 
         <footer>
