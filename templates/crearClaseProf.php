@@ -10,17 +10,15 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--stylesheets-->
         <title>Crear clase</title>
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
+        <!--stylesheets-->
         <link rel="stylesheet" href="../statics/styles/crearClaseProf.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
 
     <body>
-        <header> </header>
-
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
@@ -62,7 +60,7 @@
                         <li class="nav-item">
                         <?php
                             if($_SESSION["ID_TipoUsuario"] == 1){
-                                echo "<a class='nav-link active' aria-current='page' href='./alumnoTablero.php'>Mis cursos</a>";
+                                echo "<a class='nav-lin' href='./alumnoTablero.php'>Mis cursos</a>";
                             } else if($_SESSION["ID_TipoUsuario"] == 2){
                                 echo "<a class='nav-link' href='./VistaPrinProf.php'>Mis cursos</a>";
                             }else if($_SESSION["ID_TipoUsuario"] == 4){
@@ -71,10 +69,10 @@
                         ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link href="./foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./calendario.html">Calendario</a>
+                            <a class="nav-link" href="./calendario.php">Calendario</a>
                         </li>
                     </ul>
                 </div>
@@ -119,7 +117,7 @@
                 <div class="opciones">
                     <!-- Juegos educativos-->
                     <div id="calendario" class="elementosAside">
-                        <a href="./Calendario.html" class="linksVistas">Calendario</a>
+                        <a href="./Calendario.php" class="linksVistas">Calendario</a>
                     </div>  
                     <div id="foro" class="elementosAside">
                         <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>

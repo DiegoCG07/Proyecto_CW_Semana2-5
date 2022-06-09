@@ -10,9 +10,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- stylesheets-->
         <title>Juegos</title>
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
+        <!-- stylesheets-->
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
@@ -59,7 +59,7 @@
                         <li class="nav-item">
                         <?php
                             if($_SESSION["ID_TipoUsuario"] == 1){
-                                echo "<a class='nav-link active' aria-current='page' href='./alumnoTablero.php'>Mis cursos</a>";
+                                echo "<a class='nav-link' href='./alumnoTablero.php'>Mis cursos</a>";
                             } else if($_SESSION["ID_TipoUsuario"] == 2){
                                 echo "<a class='nav-link' href='./VistaPrinProf.php'>Mis cursos</a>";
                             }else if($_SESSION["ID_TipoUsuario"] == 4){
@@ -68,10 +68,10 @@
                         ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link href="./foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./calendario.html">Calendario</a>
+                            <a class="nav-link" href="./calendario.php">Calendario</a>
                         </li>
                     </ul>
                 </div>

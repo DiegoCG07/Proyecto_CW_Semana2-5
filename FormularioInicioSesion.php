@@ -47,12 +47,10 @@
                         
                         <button type="submit" id="btn-inicio">Iniciar sesión</button><br><br>
 
-                        <a href="./templates/FormularioRegistro.html" target="_self" style="display: none;" id="btn-registro">Registrate</a>
+                        <a href="./templates/FormularioRegistro.html" target="_self" style="display: none;" id="btn-registro">Regístrate</a>
                 </form>
             </div>
         </div>
-
-        <footer></footer>
 
         <script src="./dynamics/JS/FormularioInicioSesion.js"></script>
     </body>
