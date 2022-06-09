@@ -117,6 +117,11 @@
                         <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>
                     </div>
                 </div>
+                <a href="./juegosProf.php" target="_self">
+                    <div class="elementosAside">
+                        <span>Juegos</span>
+                    </div>
+                </a>
             </aside>
     </div>
 
