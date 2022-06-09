@@ -15,7 +15,7 @@ Debido a la pandemia generada por el virus SARS-CoV-2, el uso de aulas virtuales
 3. Hypertext Preprocessor  `PHP`
 4. `JavaScript`
 5. `MySQL`
-6. `GIT`
+6. `Git`
 
 ## Instrucciones de instalación del proyecto:
 
@@ -58,9 +58,10 @@ Información para el programador:
 - **Dynamics:**
 
     Esta carptea se encuentra subdividida en archivos **JS** y **PHP** respectivamente, vitales en el funcionamiento del proyecto.
-    **JS:** Contiene los archivos necesarios para hacer del proyecto una interfaz web interactiva.
+
+    - **JS:** Contiene los archivos necesarios para hacer del proyecto una interfaz web interactiva.
         
-    **PHP:** Contiene los archivos necesarios para hacer la conexion y el uso de información almacenada en bases de datos.
+    - **PHP:** Contiene los archivos necesarios para hacer la conexion y el uso de información almacenada en bases de datos.
 
 - **Statics:**
 
@@ -78,7 +79,7 @@ Información para el programador:
 ## Créditos:
 1. **María José García Olán:** La implementación de diseño general del proyecto y estructuras generales en las vistas, optimización de código, el desarrollo de maquetado y partes del funcionamiento de las vistas de alumno mediante.  
 2. **Rodríguez Sánchez Ricardo:** Desarrollo del diseño general del proyecto y vistas del profesor, administrador, moderador y perfil de todos los usuarios.
-3. **Zarco Romero José Antonio:** Se encargó principalmente del diseño y creación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch. También, desarrolló la plantilla del juego "Ahorcado" y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado de datos del usuario.
+3. **Zarco Romero José Antonio:** Se encargó principalmente del diseño, creación y documentación de la base de datos, así como su conexión con la página mediante peticiones HTTP con fetch y el uso de archivos PHP. También, desarrolló la plantilla del juego "Ahorcado", el foro de preguntas y los formularios de Inicio de Sesión y Registro, incluyendo el cuidado de datos del usuario.
 
 ### Agradecimientos a:
 - Bootstrap: Framework de código abierto.
