@@ -84,10 +84,13 @@
                 <div id="generarPublicacion">
                     <a href="./creaPublicacionProf.php">Generar una Publicación</a>
                 </div>
+
                 <h1>Tareas: </h1>
                 <div id="tareas"></div>
+
                 <h1>Publicaciones: </h1>
                 <div id="publicaciones"></div>
+                
                 <form action="./VistaPrinProf.php" method="post" style="margin: 3em;">
                     <button id="btn-Regresar">Regresar</button>
                 </form>

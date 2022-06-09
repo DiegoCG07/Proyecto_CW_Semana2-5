@@ -30,7 +30,7 @@ window.addEventListener("load", ()=>{
                     } else if(datosJSON.texto == "Contraseña incorrecta"){
                         alert(datosJSON.texto);
                     } else if(datosJSON.texto == "Alumno"){
-                        window.location = "./templates/alumnoInicio.php";
+                        window.location = "./templates/alumnoTablero.php";
                     } else if(datosJSON.texto == "Profesor"){
                         window.location = "./templates/VistaPrinProf.php";
                     } else if(datosJSON.texto == "Moderador"){
