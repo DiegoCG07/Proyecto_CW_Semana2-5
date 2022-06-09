@@ -42,7 +42,7 @@ GRANT DELETE, INSERT, SELECT, UPDATE ON proyectofinal_cw.* TO ‘proyectocw’@�
 ```
     Con la contraseña "bimbunuelos6"
 
-9. Una vez completadas las instrucciones anteriores editar el archivo **config-plantilla.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
+9. Una vez completadas las instrucciones anteriores editar el archivo **_config.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
 
 10. En caso de no existir la carpeta *Files* dentro de **Statics** crearla y dentro de ella crear 3 capretas llamadas *tablon*, *material* y *tarea* para almacenar los archivos subidos.
 
