@@ -88,6 +88,8 @@
                 </div>
                 <h1>Tareas: </h1>
                 <div id="tareas"></div>
+                <h1>Publicaciones: </h1>
+                <div id="publicaciones"></div>
                 <form action="./VistaPrinProf.php" method="post" style="margin: 3em;">
                     <button id="btn-Regresar">Regresar</button>
                 </form>
@@ -136,7 +138,6 @@
                 </span>
             </div>
         </footer>
-
         
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
         <script src="../dynamics/JS/VistaClaseProf.js"></script>
