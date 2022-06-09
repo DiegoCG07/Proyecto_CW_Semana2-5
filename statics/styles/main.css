@@ -161,17 +161,17 @@ h5{
 /* FOOTER
 ---------------------------------------------------------------------------------------------------- */
 footer{
-    background-color: #f5ba4c98;
-    box-shadow: 1px 1px 4px 0 rgba(0, 0, 0, .1);
     width: -webkit-fill-available;
-    bottom: 0;
-    position: absolute;
-    /* position: sticky;
-    top: 5vh; */
+    background-color: #f5ba4c98;
     width: 100%;
-    /* bottom: 0%; */
     padding: 15px;
     font-size: small;
+    line-height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    margin-top: auto;
 }
 .footer{
     display: grid;
