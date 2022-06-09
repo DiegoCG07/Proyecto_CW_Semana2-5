@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--stylesheets-->
-        <title>Foro de Dudas | Coyo-Clases</title>
+        <title>Tablón de alumnos | Coyo-Clases</title>
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
         <link rel="stylesheet" href="../statics/styles/creditos.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
@@ -64,12 +64,12 @@
         </nav>
 
         <div id="titulo2">
-            <span class="coyoseis">Coyo 6</span>
+            <span class="coyoseis">Tablón de alumnos</span>
         </div>
 
         <div id="contenedor">
             <section id="contenido" class="secciones">
-               <!-- contenido general -->
+                
             </section>
         </div>
 

@@ -66,7 +66,7 @@
                             <a class="nav-link" href="./calendario.html">Calendario</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Tablón</a>
+                            <a class="nav-link" href="./tablonAlumno.php">Tablón</a>
                         </li>
                     </ul>
                 </div>
@@ -86,14 +86,6 @@
                     Inscribirme a una nueva clase
                 </a> 
                 <div id="clases">
-                    <!-- <div class="card">       sugerencia para poner clase
-                        <img src="..." class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Materia: </h5>
-                            <p class="card-text">Profesor: </p>
-                            <a href="./alumnoClase.php" class="btn btn-primary">Ver</a>
-                        </div>
-                    </div> -->
                 </div>
             </section>
 
