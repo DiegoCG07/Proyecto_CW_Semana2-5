@@ -112,11 +112,13 @@
                         <span class='pregunta'>Nombre de Usuario: </span>
                             <span class='descripcion'>";
                             echo $_SESSION["Usuario"];
-                        echo "
-                            </span>
-                        <span class='pregunta'>Número Telefónico: </span>
-                            <span class='descripcion'>";
-                            echo $_SESSION["Telefono"]."</span>";
+                        if($_SESSION["ID_TipoUsuario"] == 1 || $_SESSION["ID_TipoUsuario"] == 2){
+                            echo "
+                                </span>
+                            <span class='pregunta'>Número Telefónico: </span>
+                                <span class='descripcion'>";
+                                echo $_SESSION["Telefono"]."</span>";
+                        }
                         if($_SESSION["ID_TipoUsuario"] == 1){
                             echo "
                             <span class='pregunta'>Número de Cuenta: </span>

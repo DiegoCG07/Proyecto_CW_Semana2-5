@@ -76,9 +76,21 @@
             <section id="contenido" class="contenido">
                 <span>Administrador</span>
                 <div class="grupos" id="agregarAdmin">
-                    
-                    <span>Agregar Administrador</span>
+                    <button id="btnAgregar">Agregar administrador</button><br>
                 </div>
+                <form id="formAgregar" style="display:none;">
+                    <label for="nombre">Nombre: </label>
+                    <input type="text" name="nombre" id="nombre"><br><br>
+                    <label for="apellidos">Apellidos: </label>
+                    <input type="text" name="apellidos" id="apellidos"><br><br>
+                    <label for="correo">Correo electrónico: </label>
+                    <input type="email" name="correo" id="correo"><br><br>
+                    <label for="usuario">Nombre de usuario: </label>
+                    <input type="text" name="usuario" id="usuario"><br><br>
+                    <label for="contrasena">Contraseña: </label>
+                    <input type="password" name="contrasena" id="contrasena"><br><br>
+                    <button type="submit" id="enviar">Enviar</button>
+                </form>
             </section>   
         </div>
 
@@ -103,6 +115,7 @@
         </footer>
 
         <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js "></script>
+        <script src="../dynamics/JS/agregarAdmin.js"></script>
     </body>
 
 </html>

@@ -11,7 +11,9 @@
         $usuario = (isset($_POST["usuario"]) && $_POST["usuario"] != "") ? $_POST["usuario"] : false; //Usuario
         $correo = (isset($_POST["correo"]) && $_POST["correo"] != "") ? $_POST["correo"] : false; //Correo
         $contraseña = (isset($_POST["contraseña"]) && $_POST["contraseña"] != "") ? $_POST["contraseña"] : false; //Contraseña
-        $noTelef = (isset($_POST["noTelef"]) && $_POST["noTelef"] != "") ? $_POST["noTelef"] : false; //Número de teléfono
+        if($alumProf == 1||$alumProf==2){
+            $noTelef = (isset($_POST["noTelef"]) && $_POST["noTelef"] != "") ? $_POST["noTelef"] : false; //Número de teléfono
+        }
         if($alumProf == 1){
             $noCuenta = (isset($_POST["noCuenta"]) && $_POST["noCuenta"] != "") ? $_POST["noCuenta"] : false; //Número de Cuenta
             $grado = (isset($_POST["grado"]) && $_POST["grado"] != "") ? $_POST["grado"] : false; //Grado
@@ -25,7 +27,6 @@
         $sal = uniqid();
         $pimienta = generarPimienta();
         $hasheo = hash("sha256", $contraseña.$pimienta.$sal);
-        echo $sal."<br>".$pimienta."<br>".$hasheo;
 
         // PETICIONES
         $sql = "INSERT INTO email (Email) VALUES ('$correo')";
@@ -46,11 +47,19 @@
                     } else if($alumProf == 2) {
                         // Petición principal maestro
                         $sql = "INSERT INTO profesor VALUES ('$numTrabajador',$noTelef,'$usuario',$ID_Usuario)";
+                    } else if($alumProf == 4) {
+                        // Petición principal maestro
+                        $sql = "INSERT INTO administrador VALUES ('$usuario',$ID_Usuario)";
                     }
                     $res = mysqli_query($conexion, $sql);
                     if($res == true){
-                        echo "<h1>Se registro correctamente al usuario</h1>";
-                        header("location: ../../FormularioInicioSesion.php");
+                        if($alumProf == 1||$alumProf==2){
+                            echo "<h1>Se registro correctamente al usuario</h1>";
+                            header("location: ../../FormularioInicioSesion.php");
+                        } else {
+                            $respuesta = array("ok" => true, "texto" => "Se registró al administrador");
+                            echo json_encode($respuesta);
+                        }
                     } else {
                         echo "<h1>Fallo al subir los datos</h1>";
                     }
