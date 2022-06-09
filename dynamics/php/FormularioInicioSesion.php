@@ -60,6 +60,18 @@
                         $_SESSION["Email"] = $row["Email"];
                     }
                     $respuesta = array("ok" => true, "texto" => "Profesor");
+                } else if($ID_TipoUsuario == 4){
+                    $sql = "SELECT*FROM administrador NATURAL JOIN usuario NATURAL JOIN email WHERE ID_Usuario=$ID_Usuario";
+                    $res = mysqli_query($conexion,$sql);
+                    while($row = mysqli_fetch_assoc($res)){
+                        $_SESSION["ID_Usuario"] = $row["ID_Usuario"];
+                        $_SESSION["Usuario"] = $row["Usuario"];
+                        $_SESSION["ID_TipoUsuario"] = $row["ID_TipoUsuario"];
+                        $_SESSION["Nombre"] = $row["Nombre"];
+                        $_SESSION["Apellidos"] = $row["Apellidos"];
+                        $_SESSION["Email"] = $row["Email"];
+                    }
+                    $respuesta = array("ok" => true, "texto" => "Administrador");
                 }
             } else {
                 $respuesta = array("ok" => true, "texto" => "Contraseña incorrecta");

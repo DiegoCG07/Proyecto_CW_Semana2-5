@@ -35,6 +35,8 @@ window.addEventListener("load", ()=>{
                         window.location = "./templates/VistaPrinProf.php";
                     } else if(datosJSON.texto == "Moderador"){
                         window.location = "./templates/foroPreguntas.php";
+                    } else if(datosJSON.texto == "Administrador"){
+                        window.location = "./templates/vistaPrinAdmin.php";
                     }
                 } else if(datosJSON.ok == false){
                     alert(datosJSON.texto);

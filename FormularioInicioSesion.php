@@ -7,6 +7,10 @@
             header("location: ./templates/alumnoTablero.php");
         } else if($_SESSION["ID_TipoUsuario"] == 2){
             header("location: ./templates/VistaPrinProf.php");
+        } else if($_SESSION["ID_TipoUsuario"] == 3){
+            header("location: ./templates/foroPreguntas.php");
+        } else if($_SESSION["ID_TipoUsuario"] == 4){
+            header("location: ./templates/vistaPrinAdmin.php");
         }
     }
 ?>
