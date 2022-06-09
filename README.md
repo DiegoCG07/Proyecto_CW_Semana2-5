@@ -19,7 +19,7 @@ Debido a la pandemia generada por el virus SARS-CoV-2, el uso de aulas virtuales
 
 ## Instrucciones de instalación del proyecto:
 
-1. Descargar un servidor local que contenga un sistema de gestion de base de datos, sugerimos **XAMPP**.
+1. Descargar un servidor local que contenga un sistema de gestión de base de datos, sugerimos el manejador de red **XAMPP**.
 2. Prender el servidor local. En caso de que tu servidor local sea *Xampp* activar **Apache** y **MySQL**.
 3. Descargar la base de datos dentro de la carpeta: `C:/xampp/mysql/bin`.
 4. Acceder mediante la terminal con la ruta antes mencionada y ejecutar el comando: 
@@ -42,7 +42,7 @@ GRANT DELETE, INSERT, SELECT, UPDATE ON proyectofinal_cw.* TO ‘proyectocw’@�
 ```
     Con la contraseña "bimbunuelos6"
 
-9. Una vez completadas las instrucciones anteriores editar el archivo **_config.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
+9. Una vez completadas las instrucciones anteriores editar el archivo **config-plantilla.php** y cambiarle el nombre a **config.php**, completando los datos requeridos con la información antes dada.
 
 ## Instrucciones de uso del proyecto:
 Instrucciones para el usuario:
