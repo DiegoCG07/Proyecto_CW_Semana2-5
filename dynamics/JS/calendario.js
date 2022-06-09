@@ -12,11 +12,12 @@ const dias = document.getElementById("dias");
 function despliegaDatos(){
     fecha.setFullYear(año,mes,dia);
     datos.innerHTML = meses[mes] + " " + año;
+    console.log(mes);
     let diasTotales = new Date(año, mes, 0).getDate();
     dias.innerHTML = "";
     let empiezaMes = new Date(año,mes,1).getDay();
     for(let i=empiezaMes;i>0;i--){
-        dias.innerHTML += "<div class='calendario' id='dia' style='background-color: beige;'></div>";
+        dias.innerHTML += "<div class='calendario' id='dia'></div>";
     }
     for(let i=1; i<(diasTotales+1); i++){
         let dias = document.getElementById("dias");
