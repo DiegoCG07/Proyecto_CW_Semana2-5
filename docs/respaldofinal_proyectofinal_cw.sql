@@ -790,7 +790,7 @@ CREATE TABLE `tipo_material` (
   `ID_TipoMaterial` int(11) NOT NULL AUTO_INCREMENT,
   `TipoMaterial` char(26) NOT NULL,
   PRIMARY KEY (`ID_TipoMaterial`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -799,6 +799,7 @@ CREATE TABLE `tipo_material` (
 
 LOCK TABLES `tipo_material` WRITE;
 /*!40000 ALTER TABLE `tipo_material` DISABLE KEYS */;
+INSERT INTO `tipo_material` VALUES (1,'Archivos de texto'),(2,'Archivos de imagen'),(3,'Diapositivas'),(4,'Archivos PDF'),(5,'Hojas de Excel'),(6,'Enlaces');
 /*!40000 ALTER TABLE `tipo_material` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -920,4 +921,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-09  5:59:36
+-- Dump completed on 2022-06-09 10:53:14
