@@ -17,7 +17,7 @@
     </head>
     <body>
 
-    <nav class="navbar bg-light fixed-top">
+        <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
@@ -67,71 +67,69 @@
                         ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="./foroPreguntas.php">Foro de preguntas</a>
+                            <a class="nav-link href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./calendario.html">Calendario</a>
+                            <a class="nav-link" href="./calendario.php">Calendario</a>
                         </li>
                     </ul>
                 </div>
             </div>         
         </nav>
 
-        <div id="body">
-            <div id="titulo2">
-                <span class="coyoseis">NOMBRE CLASE</span>
-            </div>
+        <div id="titulo2">
+            <span class="coyoseis">NOMBRE CLASE</span>
+        </div>
 
-            <div id="contenedor">
-                <section id="contenido" class="secciones">
-                    <?php
-                            echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
-                        echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
-                    ?>
+        <div id="contenedor">
+            <section id="contenido" class="secciones">
+                <?php
+                        echo "<span id='bienvenida'>".$_SESSION["Nombre"]." ".$_SESSION["Apellidos"]."</span><br>";
+                    echo "<span id='bienvenida'>¡Bienvenidx, ".$_SESSION["Usuario"]."!</span><br><br>";
+                ?>
 
-                    <!--planeo ponerle un evento para que muestre solo tareas o solo material-->
-                    <div class="contenidoClase">
-                        <span>Avisos generales</span>
-                        <div id="avisos" style="display: none;">
-                            
-                        </div>
-                    </div>
+                <!--planeo ponerle un evento para que muestre solo tareas o solo material-->
+                <div class="contenidoClase">
+                    <span>Avisos generales</span>
+                    <div id="avisos" style="display: none;">
                         
-                    <select name="publicaciones" id="publicaciones"  class="contenidoClase">
-                        <option value="1">Asignaciones</option>
-                        <option value="2">Material</option>
-                        <option value="3">Juego</option>
-                    </select> 
+                    </div>
+                </div>
+                    
+                <select name="publicaciones" id="publicaciones"  class="contenidoClase">
+                    <option value="1">Asignaciones</option>
+                    <option value="2">Material</option>
+                    <option value="3">Juego</option>
+                </select> 
 
-                <div id="tareas" style="display: none;"  class="contenidoClase">
-                        <span>Asignaciones</span>
-                    </div>
+            <div id="tareas" style="display: none;"  class="contenidoClase">
+                    <span>Asignaciones</span>
+                </div>
 
-                    <div id="material" style="display: none;"  class="contenidoClase">
-                        <span>Material</span>
-                    </div>
-                    <div id="juegos">
-                        <form action="./ahorcado.html" method="post">
-                            <button id="ahorcado" style="display: none;">Ahorcado</button>
-                        </form>
-                    </div>
-                    <!-- <div id="tablón" style="display: none;">
-                        <span>Aisgnaciones</span>
-                    </div> -->
-                </section>
+                <div id="material" style="display: none;"  class="contenidoClase">
+                    <span>Material</span>
+                </div>
+                <div id="juegos">
+                    <form action="./ahorcado.html" method="post">
+                        <button id="ahorcado" style="display: none;">Ahorcado</button>
+                    </form>
+                </div>
+                <!-- <div id="tablón" style="display: none;">
+                    <span>Aisgnaciones</span>
+                </div> -->
+            </section>
 
-                <aside class="secciones">
-                    <div class="opciones">
-                        <!-- Juegos educativos-->
-                        <div id="calendario" class="elementosAside">
-                            <a href="./Calendario.html" class="linksVistas">Calendario</a>
-                        </div>  
-                        <div id="foro" class="elementosAside">
-                            <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>
-                        </div>
+            <aside class="secciones">
+                <div class="opciones">
+                    <!-- Juegos educativos-->
+                    <div id="calendario" class="elementosAside">
+                        <a href="./Calendario.php" class="linksVistas">Calendario</a>
+                    </div>  
+                    <div id="foro" class="elementosAside">
+                        <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>
                     </div>
-                </aside>
-            </div>
+                </div>
+            </aside>
         </div>
 
         <footer>

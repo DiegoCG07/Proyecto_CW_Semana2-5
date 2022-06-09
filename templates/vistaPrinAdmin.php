@@ -5,9 +5,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--stylesheets-->
         <title>Clases</title>
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
+        <!--stylesheets-->
         <link rel="stylesheet" href="../statics/styles/vistaAdmin.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
@@ -21,22 +21,26 @@
                     </button>
                     <h1 class="titulo">Coyo 6</h1>
                 </div>
-                <form class="d-flex" role="search">
-                    <a class="nav-link" href="./vistaPrinAdmin.php">Perfil: ADMINISTRADOR</a>
-                    <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit"><img src="../statics/media/img/busqueda.png" alt="lupa"></button> -->
-                </form>
+                <div>
+                    <?php
+                        if($_SESSION["ID_TipoUsuario"] == 1){
+                            echo "<a class='nav-link' href='./perfilUsuario.php'>Perfil: ALUMNO</a>";
+                        } else if($_SESSION["ID_TipoUsuario"] == 2){
+                            echo "<a class='nav-link' href='./perfilUsuario.php'>Perfil: PROFESOR</a>";
+                        }else if($_SESSION["ID_TipoUsuario"] == 4){
+                            echo "<a class='nav-link' href='./perfilUsuario.php'>Perfil: ADMIN";
+                        }
+                    ?>
+                </div>
 
                 <div id="iconosNav">
-                    <img src="../statics/media/img/campana.png" class="icono" alt="notificaciones">
                     <a class="nav-link dropdown-toggle"id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         <img src="../statics/media/img/usuario.png" class="icono" alt="perfil">
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                        <li><a class="dropdown-item" href="./PerfilProf.php">Perfl</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Preferencias</a></li> -->
+                        <li><a class='dropdown-item' href='./perfilUsuario.php'>Perfil</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <!-- <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li> -->
+                        <li><a class="dropdown-item" href="../dynamics/php/cerrarSesion.php">Cerrar Sesion</a></li>
                     </ul>
                     
                 </div>
@@ -48,20 +52,21 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link" href="./adminClases.php">Clases</a>
+                        <?php
+                            if($_SESSION["ID_TipoUsuario"] == 1){
+                                echo "<a class='nav-link' href='./alumnoTablero.php'>Mis cursos</a>";
+                            } else if($_SESSION["ID_TipoUsuario"] == 2){
+                                echo "<a class='nav-link' href='./VistaPrinProf.php'>Mis cursos</a>";
+                            }else if($_SESSION["ID_TipoUsuario"] == 4){
+                                echo "<a class='nav-link active' aria-current='page' href='./VistaPrinAdmin.php'>Página Inicial</a>";
+                            }
+                        ?>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./adminPartici.php">Usuarios</a>
-                            <!-- vista de profes y alumnos -->
+                            <a class="nav-link" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Calendario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Tablón</a>
+                            <a class="nav-link" href="./calendario.php">Calendario</a>
                         </li>
                     </ul>
                 </div>
@@ -91,7 +96,18 @@
                     <input type="password" name="contrasena" id="contrasena"><br><br>
                     <button type="submit" id="enviar">Enviar</button>
                 </form>
-            </section>   
+            </section>
+            <aside class="secciones">
+                <div class="opciones">
+                    <!-- Juegos educativos-->
+                    <div id="calendario" class="elementosAside">
+                        <a href="./Calendario.php" class="linksVistas">Calendario</a>
+                    </div>  
+                    <div id="foro" class="elementosAside">
+                        <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>
+                    </div>
+                </div>
+            </aside> 
         </div>
 
         <footer>

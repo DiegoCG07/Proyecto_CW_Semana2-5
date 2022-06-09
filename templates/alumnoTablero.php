@@ -10,9 +10,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--stylesheets-->
         <title>Principal</title>
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
+        <!--stylesheets-->
         <link rel="stylesheet" href="../statics/styles/alumnoTablero.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
@@ -21,7 +21,6 @@
     <body>
     
         <!-- BARRA DE NAVEGACION -->
-
         <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
@@ -75,7 +74,7 @@
                             <a class="nav-link href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./calendario.html">Calendario</a>
+                            <a class="nav-link" href="./calendario.php">Calendario</a>
                         </li>
                     </ul>
                 </div>
@@ -87,7 +86,7 @@
         </div>
 
         <div id="contenedor">
-        <section id="contenido" class="secciones">
+            <section id="contenido" class="secciones">
                 <?php
                     echo "<h1>¡Bienvenidx, ".$_SESSION["Usuario"]."!</h1>";
                 ?>
@@ -102,10 +101,10 @@
                 <div class="opciones">
                     <!-- Juegos educativos-->
                     <div id="calendario" class="elementosAside">
-                        <span>Calendario</span>
-                    </div>
-                    <div id="avisos" class="elementosAside">
-                        <span>Avisos</span>
+                        <a href="./Calendario.php" class="linksVistas">Calendario</a>
+                    </div>  
+                    <div id="foro" class="elementosAside">
+                        <a href="./foroPreguntas.php" class="linksVistas">Foro de Dudas</a>
                     </div>
                 </div>
             </aside>
@@ -131,10 +130,7 @@
             </div>
         </footer>
 
-        
-
         <script src="../libs/bootstrap-5.2.0-beta1-dist/js/bootstrap.bundle.js"></script>
         <script src="../dynamics/JS/alumnoTablero.js"></script>
     </body>
-
 </html>
