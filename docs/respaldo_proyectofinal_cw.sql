@@ -184,7 +184,7 @@ CREATE TABLE `calendario` (
   PRIMARY KEY (`ID_Fecha`),
   KEY `ID_TipoFecha` (`ID_TipoFecha`),
   CONSTRAINT `calendario_ibfk_1` FOREIGN KEY (`ID_TipoFecha`) REFERENCES `tipo_fecha` (`ID_TipoFecha`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -193,6 +193,7 @@ CREATE TABLE `calendario` (
 
 LOCK TABLES `calendario` WRITE;
 /*!40000 ALTER TABLE `calendario` DISABLE KEYS */;
+INSERT INTO `calendario` VALUES (1,'Día de Reyes','0000-01-06 00:00:00',5),(2,'Día del Trabajo','0000-05-01 00:00:00',5),(3,'Día internacional de la Mujer','0000-03-08 00:00:00',5),(4,'Conmemoración del Grito de Independencia','0000-09-15 00:00:00',5),(5,'Día de las Naciones Unidas','0000-10-24 00:00:00',5),(6,'Aniversarios del inicio de la Revolución Mexicana, en 1910','0000-11-20 00:00:00',5),(7,'Día del Maestro','0000-05-15 00:00:00',5),(8,'Día de la madre','0000-05-10 00:00:00',5),(9,'Día Mundial de la Salud','0000-04-07 00:00:00',5),(10,'Día del amor y la amistad','0000-02-14 00:00:00',5);
 /*!40000 ALTER TABLE `calendario` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -919,4 +920,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-06-08 17:00:19
+-- Dump completed on 2022-06-09  5:59:36
