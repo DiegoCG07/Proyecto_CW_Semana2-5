@@ -25,7 +25,7 @@
             $respuesta = array("ok" => true,"texto"=>"Te has inscrito a una clase");
             
         } else {
-            $respuesta = array("ok" => false, "texto" => "No se pudo completar la inscroipción");
+            $respuesta = array("ok" => false, "texto" => "No se pudo completar la inscripción (revisa que el código de clase este escrito correctamente)");
         }
     }
     echo json_encode($respuesta);
