@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
     <body>
-    <nav class="navbar bg-light fixed-top">
+        <nav class="navbar bg-light fixed-top">
             <div class="container-fluid">
                 <div id="div1">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
