@@ -1,26 +1,26 @@
 #alumnos{
     position: relative;
-    width: 700px;
-    height: 80px;
-    left: 50px;
-    margin: 35px;
     background-color: #ff7b0094;
     text-align: center;
-    display:inline-block;
+    display: inline-block;
     border-radius: 9px;
     font-size: 20px;
+    margin: 35px;
+    width: 700px;
+    height: 80px;
+    left: -6%;
 }
 .descripcionAlumnos{
-    display: flex inline-block;
-    flex-direction: row;
     position: relative;
-    width: 350px;
-    height: 80px;
-    left: 230px;
-    margin: 35px;
+    flex-direction: row;
     text-align: center;
-    border-radius: 9px;
+    display: flex inline-block;
+    border-radius: 20px;
     font-size: 15px;
     border: 1px solid;
-    border-radius: 20px;
+    margin: 35px;
+    width: 350px;
+    height: 80px;
+    left: 20%;
+    margin: 35px;
 }

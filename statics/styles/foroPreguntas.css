@@ -1,39 +1,39 @@
 .optPredeterminada{
     background-color: aliceblue;
     padding: 2em;
-    margin: 1.5em;
     border-radius: 4em;
+    margin: 1.5em;
 }
 #predeterminadas{
     background-color: sandybrown;
-    width: 70vw;
     padding: 1em;
-    margin: 1em;
     border-radius: 2em;
+    margin: 1em;
+    width: 70vw;
 }
 #dudas{
     background-color: aquamarine;
-    width: 70vw;
     padding: 1em;
-    margin: 1em;
     border-radius: 2em;
+    margin: 1em;
+    width: 70vw;
 }
 #pregunta{
     font-weight: bolder;
 }
 #respuesta{
+    position: relative;
     display: block;
     text-align: justify;
-    position: relative;
-    left: 10%;
     margin-right: 10%;
+    left: 10%;
 }
 #preguntaForo{
     display: block;
     text-align: center;
     border: none;
-    width: 60vw;
     border-radius: 2em;
+    width: 60vw;
 }
 #datos{
     display: block;

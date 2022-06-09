@@ -1,50 +1,50 @@
 #generarAviso{
     position: relative;
+    background-color: #c4c4c4;
+    text-align: center;
+    display: inline-block;
+    margin: 35px;
+    border-radius: 9px;
+    font-size: 20px;
     width: 700px;
     height: 190px;
     left: 50px;
-    margin: 35px;
-    background-color: #c4c4c4;
-    text-align: center;
-    display:inline-block;
-    border-radius: 9px;
-    font-size: 20px;
 }
 #generarTarea{
     position: relative;
+    background-color: #c4c4c4;
+    text-align: center;
+    display: inline-block;
+    margin: 35px;
+    border-radius: 9px;
+    font-size: 20px;
     width: 700px;
     height: 130px;
     left: 50px;
-    margin: 35px;
-    background-color: #c4c4c4;
-    text-align: center;
-    display:inline-block;
-    border-radius: 9px;
-    font-size: 20px;
 }
 #generarActividad{
     position: relative;
+    background-color: #c4c4c4;
+    text-align: center;
+    display: inline-block;
+    margin: 35px;
+    border-radius: 9px;
+    font-size: 20px;
     width: 700px;
     height: 130px;
     left: 50px;
-    margin: 35px;
-    background-color: #c4c4c4;
-    text-align: center;
-    display:inline-block;
-    border-radius: 9px;
-    font-size: 20px;
 }
 #generarPublicacion{
     position: relative;
+    background-color: #c4c4c4;
+    text-align: center;
+    display: inline-block;
+    margin: 35px;
+    border-radius: 9px;
+    font-size: 20px;
     width: 700px;
     height: 130px;
     left: 50px;
-    margin: 35px;
-    background-color: #c4c4c4;
-    text-align: center;
-    display:inline-block;
-    border-radius: 9px;
-    font-size: 20px;
 }
 #btn-Regresar{
     background-color: orange;

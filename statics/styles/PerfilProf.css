@@ -1,48 +1,48 @@
-#subtitulo{
-    width: 600px;
-    height: 70px;
+.contenido{
+    position: relative;
+    display: flex;
+    display: inline-block;
+    font-size: 20px;
     margin: 35px;
+    width: 600px;
+}
+.pregunta{
+    text-align: center;
+    font-size: 20px;
+    width: 100px;
+    height: 60px;
+}
+.descripcion{
+    display: flex;
+    display: inline-block;
+    text-align: center;
+    border-radius: 9px;
+    font-size: 20px;
+    border: 1px solid;
+    margin: 15px;
+    width: 500px;
+    height: 60px;
+}
+#subtitulo{
     background-color: #ff7b0094;
     text-align: center;
     display:inline-block;
     border-radius: 9px;
     font-size: 25px;
-}
-.contenido{
-    display: flex;
-    display: inline-block;
-    position: relative;
-    width: 600px;
     margin: 35px;
-    font-size: 20px;
-}
-.pregunta{
-    width: 100px;
-    height: 60px;
-    text-align: center;
-    font-size: 20px;
-}
-.descripcion{
-    display: flex;
-    display: inline-block;
-    width: 500px;
-    height: 60px;
-    margin: 15px;
-    text-align: center;
-    border-radius: 9px;
-    font-size: 20px;
-    border: 1px solid;
+    width: 600px;
+    height: 70px;
 }
 #nombre{
     display: inline-block;
-    width: 300px;
     border: 2px solid;
     border-radius: 20px;
     align-content: center;
+    width: 300px;
 }
 #contenidoNombre{
-    margin: 15px;
-    height: 300px;
     text-align: center;
     font-size: 20px;
+    margin: 15px;
+    height: 300px;
 }
