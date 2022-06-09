@@ -9,6 +9,7 @@
         <link rel="icon" href="../statics/media/img/icono.jpg" type="image/png">
         <link rel="stylesheet" href="../statics/styles/creditos.css">
         <link rel="stylesheet" href="../statics/styles/main.css">
+        <link rel="stylesheet" href="../statics/styles/calendario.css">
         <link rel="stylesheet" href="../libs/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
     </head>
     <body>
@@ -69,17 +70,39 @@
 
         <div id="contenedor">
             <section id="contenido" class="secciones">
-               <div id="contenedorCalendario"> 
+               <!-- <div id="contenedorCalendario"> 
                     <div id="divfecha">
                         <img class="flechas" src="../statics/media/img/anterior.png" alt="anterior">
                         <p id="fecha"></p>
-                        <img class="flechas" src="../statics/media/img/siguiente.png" alt="siguiente">
+                        
                     </div>
                     <div id="divEvento">
                         
                     </div>
 
+               </div> -->
+               <div class="calendario">
+                   <div class="calendario" id="navCalendario">
+                        <div class="calendario" id="flechaAntes">
+                            <img class="flechas" src="../statics/media/img/anterior.png" alt="anterior">
+                        </div>
+                        <div class="calendario" id="datos" style="font-size: 2em;"></div>
+                        <div class="calendario" id="flechaDespues">
+                            <img class="flechas" src="../statics/media/img/siguiente.png" alt="siguiente">
+                        </div>
+                    </div>
+                   <div class="calendario" id="semana">
+                       <div class="calendario" id="dia">Dom</div>
+                       <div class="calendario" id="dia">Lun</div>
+                       <div class="calendario" id="dia">Mar</div>
+                       <div class="calendario" id="dia">Mié</div>
+                       <div class="calendario" id="dia">Jue</div>
+                       <div class="calendario" id="dia">Vie</div>
+                       <div class="calendario" id="dia">Sáb</div>
+                   </div>
+                   <div class="calendario" id="dias"></div>
                </div>
+               <div class="calendar" id="calendar-7" data-mdb-readonly="true"></div>
             </section>
         </div>
 
@@ -106,5 +129,6 @@
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../dynamics/JS/calendario.js"></script>
     </body>
 </html>

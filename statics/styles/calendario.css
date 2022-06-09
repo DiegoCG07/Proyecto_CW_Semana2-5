@@ -1,9 +1,25 @@
 .flechas{
-    height: 20px;
+    width: 4vw;
+    cursor: pointer;
+    margin: .8em;
 }
-
-#divfecha{
+.calendario{
+    background-color: antiquewhite;
+    padding: .5em;
+}
+.calendario > #navCalendario{
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
+}
+.calendario > #semana{
+    display: grid;
+    grid-template-columns: repeat(7,.5fr);
+}
+.calendario > #dias{
+    display: grid;
+    grid-template-columns: repeat(7,.5fr);
+}
+.calendario > #dia{
+    display: flex;
+    justify-content: center;
 }

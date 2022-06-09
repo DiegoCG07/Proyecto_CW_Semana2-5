@@ -63,7 +63,7 @@
                             <a class="nav-link active" aria-current="page" href="./foroPreguntas.php">Foro de preguntas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Calendario</a>
+                            <a class="nav-link" href="./calendario.html">Calendario</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Tablón</a>
